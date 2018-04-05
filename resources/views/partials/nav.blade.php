@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Registreer</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="#"><img src="/open-iconic-master/svg/person.svg" alt="person"></a>
             </li>
         </ul>
 
