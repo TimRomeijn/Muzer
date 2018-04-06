@@ -10,7 +10,9 @@
                 <p class="lead">Alles voor de muzikant! extra extra extra</p>
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <button type="button" class="btn btn-primary">INFO</button>
+                <div class="info-buttonclass text-center">
+                    <button type="button" class="btn btn-primary">INFO</button>
+                </div>
             </div>
         </div>
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
