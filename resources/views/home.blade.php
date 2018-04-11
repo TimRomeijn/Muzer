@@ -21,7 +21,9 @@
                 <p class="lead">Vorm je band en start je carrière!</p>
             </div>
             <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <button type="button" class="btn btn-primary">INFO</button>
+                <div class="info-buttonclass text-center">
+                    <button type="button" class="btn btn-primary">INFO</button>
+                </div>
             </div>
         </div>
         <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
@@ -30,7 +32,9 @@
                 <p class="lead">Vindt de podia voor jouw band!</p>
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <button type="button" class="btn btn-primary">INFO</button>
+                <div class="info-buttonclass text-center">
+                    <button type="button" class="btn btn-primary">INFO</button>
+                </div>
             </div>
         </div>
     </div>

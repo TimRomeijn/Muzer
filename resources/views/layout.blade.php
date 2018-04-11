@@ -11,7 +11,7 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href="/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="public/css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 </head>
 
 <body>

@@ -11,6 +11,17 @@
 |
 */
 
+
+//General Routing
+
 Route::get('/', function () {
     return view('home');
 });
+
+
+
+// Advanced Search Routing
+
+
+// Profiles Routing
+

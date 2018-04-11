@@ -1,0 +1,8 @@
+//normalize
+// - this file normalize all the default layout, but adds no other styling
+
+@import "variables";
+//site
+// - this is the site specific styling
+@import "app";
+@import "home";
