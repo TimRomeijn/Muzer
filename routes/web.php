@@ -22,6 +22,13 @@ Route::get('/', function () {
 
 // Advanced Search Routing
 
+Route::get('/advancedsearch', 'AdvancedSearchController@index');
+
+Route::get('/advancedsearch/bandsearch', 'AdvancedSearchController@bandsearch');
+
+Route::get('/advancedsearch/stagesearch', 'AdvancedSearchController@stagesearch');
+
+
 
 // Profiles Routing
 

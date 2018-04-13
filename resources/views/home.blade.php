@@ -11,29 +11,35 @@
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">
-                    <button type="button" class="btn btn-primary">INFO</button>
+                    <a href="advancedsearch/">
+                        <button type="button" class="btn btn-primary">INFO</button>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="home-block bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
                 <h2 class="display-5">Band</h2>
                 <p class="lead">Vorm je band en start je carrière!</p>
             </div>
             <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">
-                    <button type="button" class="btn btn-primary">INFO</button>
+                    <a href="advancedsearch/bandsearch">
+                        <button type="button" class="btn btn-primary">INFO</button>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="home-block bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Podium</h2>
                 <p class="lead">Vindt de podia voor jouw band!</p>
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">
-                    <button type="button" class="btn btn-primary">INFO</button>
+                    <a href="advancedsearch/stagesearch">
+                        <button type="button" class="btn btn-primary">INFO</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -43,7 +49,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 font-weight-normal">Ontdek!</h1>
             <p class="lead font-weight-normal">Zoek en filter hier op de muzikant,band of podium voor jou!</p>
-            <a class="btn btn-outline-secondary" href="#">ZOEK</a>
+            <a class="btn btn-outline-secondary" href="advancedsearch">ZOEK</a>
         </div>
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
