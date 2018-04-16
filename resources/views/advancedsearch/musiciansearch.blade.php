@@ -3,7 +3,9 @@
 
 @section('content')
 
-    <h1>Muzikantzoek:</h1>
+
+    @include('partials.advancedsearch')
+
 
 
 

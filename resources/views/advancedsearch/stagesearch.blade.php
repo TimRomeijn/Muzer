@@ -5,7 +5,7 @@
 
     <h1>Podiumzoek:</h1>
 
-
+    @include('partials.advancedsearch')
 
 
 

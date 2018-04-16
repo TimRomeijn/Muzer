@@ -5,7 +5,7 @@
 
     <h1>Bandzoek:</h1>
 
-
+    @include('partials.advancedsearch')
 
 
 
