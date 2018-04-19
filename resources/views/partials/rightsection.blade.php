@@ -25,22 +25,22 @@
             <li class="active">
                 <a href="#">
                     <i class="glyphicon glyphicon-home"></i>
-                    Overview </a>
+                    Overzicht </a>
             </li>
             <li>
                 <a href="#">
                     <i class="glyphicon glyphicon-user"></i>
-                    Account Settings </a>
+                    Agenda </a>
             </li>
             <li>
-                <a href="#" target="_blank">
+                <a href="#">
                     <i class="glyphicon glyphicon-ok"></i>
-                    Tasks </a>
+                    Materiaal </a>
             </li>
             <li>
                 <a href="#">
                     <i class="glyphicon glyphicon-flag"></i>
-                    Help </a>
+                    Downloads </a>
             </li>
         </ul>
     </div>

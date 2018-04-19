@@ -1,9 +1,31 @@
 .filter-container {
   border: 1px solid black;
+  background: lightgray;
 }
 .results-container {
   border: 1px solid black;
 }
 .rightsection-container {
   border: 1px solid black;
+}
+
+@media (max-width: 576px) {
+
+  .filter-container {
+    display: none;
+  }
+
+  .rightsection-container {
+    display: none;
+  }
+  .results-container {
+
+  }
+}
+
+@media (min-width: 577px) {
+
+  .mobile-search {
+    display: none;
+  }
 }

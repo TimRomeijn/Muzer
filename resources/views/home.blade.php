@@ -7,7 +7,7 @@
         <div class="home-block bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Muzikant</h2>
-                <p class="lead">Alles voor de muzikant! extra extra extra</p>
+                <p class="lead">Zoek hier naar de juiste muzikant voor jou!</p>
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">
@@ -20,7 +20,7 @@
         <div class="home-block bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
                 <h2 class="display-5">Band</h2>
-                <p class="lead">Vorm je band en start je carrière!</p>
+                <p class="lead">Zoek hier naar de juiste band voor jou!</p>
             </div>
             <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">
@@ -33,7 +33,7 @@
         <div class="home-block bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Podium</h2>
-                <p class="lead">Vindt de podia voor jouw band!</p>
+                <p class="lead">Zoek hier naar het juiste podium voor jou!</p>
             </div>
             <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
                 <div class="info-buttonclass text-center">

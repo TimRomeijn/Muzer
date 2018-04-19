@@ -20,3 +20,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+// $(function () {
+//     var activeTab = $('[href=' + location.hash + ']');
+//     activeTab && activeTab.tab('show');
+// });
+
