@@ -1,16 +1,16 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        /*concat: {
+        concat: {
             vendors:{
-                src: ['js/vendor/!*.js'],
-                dest: '../../../Source/www/js/vendor.concat.js'
+                src: ['js/vendor/**/*.js'],
+                dest: '../../public/js/vendor.concat.js'
             },
-            dpi: {
-                src: ['js/dpi/!**!/!*.js'],
-                dest: '../../../Source/www/js/main.concat.js'
+            main: {
+                src: ['js/main/**/*.js'],
+                dest: '../../public/js/main.concat.js'
             }
-        },*/
+        },
         sass: {
             options: {
                 outputStyle: 'compressed',
@@ -25,15 +25,37 @@ module.exports = function(grunt) {
             }
         },
 
+        js: {
+            options: {
+                outputStyle: 'compressed',
+                sourceMap: true,
+                livereload: false,
+                expand: true
+            },
+            dist: {
+                files: {
+                    '../../public/js/app.js': 'js/main.js'
+                }
+            }
+        },
+        jsvendor: {
+            options: {
+                outputStyle: 'compressed',
+                sourceMap: true,
+                livereload: false,
+                expand: true
+            }
+        },
+
         watch: {
-            /*jsdpi: {
-                files: ['js/dpi/!**!/!*.js'],
-                tasks: ['concat:dpi', 'sftp-deploy']
+            js: {
+                files: ['js/main/**/*.js'],
+                tasks: ['concat:main']
             },
             jsvendor: {
-                files: ['js/vendor/!*.js'],
-                tasks: ['concat:vendors', 'sftp-deploy']
-            },*/
+                files: ['js/vendor/**/*.js'],
+                tasks: ['concat:vendors']
+            },
             css: {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass'],

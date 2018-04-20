@@ -2,6 +2,9 @@
     <div id="accordion" class="panel panel-primary behclick-panel">
         <div class="panel-heading">
             <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
+            <div class="close-filter-button">
+                <span class="oi oi-circle-x" title="person" aria-hidden="true"></span>
+            </div>
         </div>
         <div class="panel-body">
             <div class="panel-heading " >
@@ -161,6 +164,9 @@
     <div id="accordion" class="panel panel-primary behclick-panel">
         <div class="panel-heading">
             <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
+            <div class="close-filter-button">
+                <span class="oi oi-circle-x" title="person" aria-hidden="true"></span>
+            </div>
         </div>
         <div class="panel-body">
             <div class="panel-heading " >
@@ -337,6 +343,9 @@
     <div id="accordion" class="panel panel-primary behclick-panel">
         <div class="panel-heading">
             <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
+            <div class="close-filter-button">
+                <span class="oi oi-circle-x" title="person" aria-hidden="true"></span>
+            </div>
         </div>
         <div class="panel-body">
             <div class="panel-heading " >

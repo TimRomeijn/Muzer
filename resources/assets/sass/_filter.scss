@@ -70,3 +70,14 @@
 .search-button {
   margin: 10px 0;
 }
+
+.close-filter-button {
+  text-align: right;
+}
+
+@media (min-width: 577px) {
+
+  .close-filter-button {
+    display: none;
+  }
+}

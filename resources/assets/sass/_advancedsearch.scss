@@ -9,23 +9,26 @@
   border: 1px solid black;
 }
 
-@media (max-width: 576px) {
-
+@include media-breakpoint-down(sm) {
   .filter-container {
-    display: none;
+    position: absolute;
+    z-index: 1225;
+    top: 0;
+    left: 0;
   }
 
-  .rightsection-container {
-    display: none;
-  }
   .results-container {
-
+      display: none;
   }
-}
-
-@media (min-width: 577px) {
 
   .mobile-search {
-    display: none;
+    display: inline-block;
+  }
+
+  .filter-button {
+    text-align: right;
+    display: inline-block;
+    margin-left: 3%;
   }
 }
+

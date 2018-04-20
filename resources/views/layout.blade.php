@@ -12,6 +12,7 @@
     <link href="/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -35,5 +36,6 @@
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/js/main.concat.js"></script>
 </body>
 </html>

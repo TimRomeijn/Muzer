@@ -5,9 +5,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('../vendor/bootstrap');
 
-window.Vue = require('vue');
+// window.Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,14 +15,16 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
-
-// $(function () {
-//     var activeTab = $('[href=' + location.hash + ']');
-//     activeTab && activeTab.tab('show');
+// Vue.component('example-component', require('../components/ExampleComponent.vue'));
+//
+// const app = new Vue({
+//     el: '#app'
 // });
 
+$('.filter-button').click(function() {
+    $('.filter-container').removeClass('d-none');
+});
+
+$('.close-filter-button').click(function () {
+    $('.filter-container').addClass('d-none');
+});
