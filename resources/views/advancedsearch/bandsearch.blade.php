@@ -14,7 +14,7 @@
 
     <div class="filter-button d-sm-none">
         <span class="oi oi-expand-down" title="person" aria-hidden="true"></span>
-        <img src="" alt="filter-results">
+        {{--<img src="" alt="filter-results">--}}
     </div>
 
     @include('partials.advancedsearch',  ['isBand' => true])

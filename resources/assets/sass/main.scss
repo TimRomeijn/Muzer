@@ -2,6 +2,9 @@
 // - this file normalize all the default layout, but adds no other styling
 
 @import "variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 //site
 // - this is the site specific styling
 @import "app";
@@ -10,3 +13,6 @@
 @import "advancedsearch";
 @import "results";
 @import "rightsection";
+@import "banner";
+@import "profiletabs";
+@import "blocks";

@@ -32,3 +32,11 @@ Route::get('/advancedsearch/stagesearch', 'AdvancedSearchController@stagesearch'
 
 // Profiles Routing
 
+Route::get('/profiles/musicianprofile', 'ProfilesController@musicianprofile');
+
+Route::get('/profiles/bandprofile', 'ProfilesController@bandprofile');
+
+Route::get('/profiles/stageprofile', 'ProfilesController@stageprofile');
+
+
+// Chat Routing
