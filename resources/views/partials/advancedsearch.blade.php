@@ -1,9 +1,9 @@
-<?php
+@php
 $isMusician = isset($isMusician) ? $isMusician : false;
 $isBand = isset($isBand) ? $isBand : false;
 $isStage = isset($isStage) ? $isStage : false;
 
-?>
+@endphp
 <div class="container">
     <div class="row">
         <div class="col filter-container d-none d-sm-block">

@@ -27,10 +27,3 @@
     </div>
 </div>
 
-<ul class="nav nav-tabs nav-fill">
-    @foreach($menuItems as $item)
-        <li class="nav-item tprofile">
-            <a class="nav-link " href="#">{{ $item }}</a>
-        </li>
-    @endforeach
-</ul>

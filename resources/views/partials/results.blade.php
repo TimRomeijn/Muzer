@@ -17,7 +17,7 @@
             @if($isMusician)
                 <div class="card">
                     <div class="card-header">
-                        Featured
+                        Naam
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Muzikant</h5>
@@ -33,7 +33,7 @@
             @if($isBand)
                 <div class="card">
                     <div class="card-header">
-                        Featured
+                        Naam
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Band</h5>
@@ -49,7 +49,7 @@
             @if($isStage)
                 <div class="card">
                     <div class="card-header">
-                        Featured
+                        Naam
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Podium</h5>
