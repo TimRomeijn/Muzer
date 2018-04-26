@@ -22,7 +22,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Muzikant</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Bekijk</a>
+                        <a href="/profiles/musicianprofile/" class="btn btn-primary">Bekijk</a>
                     </div>
                 </div>
             @endif
@@ -38,7 +38,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Band</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Bekijk</a>
+                        <a href="/profiles/bandprofile/" class="btn btn-primary">Bekijk</a>
                     </div>
                 </div>
             @endif
@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Podium</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Bekijk</a>
+                        <a href="/profiles/stageprofile/" class="btn btn-primary">Bekijk</a>
                     </div>
                 </div>
             @endif
