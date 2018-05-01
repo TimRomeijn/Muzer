@@ -5,7 +5,7 @@
                     @foreach($blocks as $block)
 
                         {{--<div class="card-columns">--}}
-                            <div class="card">
+                            <div class="card col-md">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $block }}</h5>
                                     <button type="button" class="btn btn-info">

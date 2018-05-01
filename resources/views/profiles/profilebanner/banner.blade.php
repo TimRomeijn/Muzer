@@ -5,7 +5,9 @@
             <!-- http://lorempixel.com/850/280/people/9/ -->
         </div>
         <div class="useravatar">
-            <img alt="" src="https://picsum.photos/300/300">
+            <a href="">
+                <img alt="" src="https://picsum.photos/300/300">
+            </a>
         </div>
         <div class="card-body">
             <h5 class="card-title">ProfielNaam</h5>

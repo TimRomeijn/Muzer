@@ -9,7 +9,7 @@ class ProfilesController extends Controller
     public function musicianprofile ( $tab = 'Overzicht') {
 
         $collection = [
-          'Overzicht'=>['Instrumenten', 'Genre', 'Regio/Locatie', 'Opzoek Naar', 'Soort Muzikant', 'Socials' ],
+          'Overzicht'=>['Instrumenten', 'Genre', 'Regio/Locatie', 'Invloeden', 'Opzoek Naar', 'Soort Muzikant', 'Socials' ],
           'Materiaal'=>["Muziek", "Video", "Foto's"],
           "Planning"=>["Planning", "Tijdsbeschikking"],
           "Reviews"=>["Reviewtitel"]
@@ -24,7 +24,7 @@ class ProfilesController extends Controller
     public function bandprofile ( $tab = 'Overzicht') {
 
         $collection =[
-            'Overzicht'=>['Bio', 'Repertoire/Setlist', 'Regio/Locatie', 'Genre', 'Gage', 'Socials' ],
+            'Overzicht'=>['Bio', 'Repertoire/Setlist', 'Regio/Locatie', 'Invloeden', 'Genre', 'Gage', 'Socials' ],
             'Materiaal'=>["Muziek", "Video", "Foto's"],
             "Planning"=>["Planning", "Tijdsbeschikking", "Shows"],
             "Downloads"=>["Foto's", "Riders/Stageplans", "CV", "Contract", "Perskit"],
@@ -40,7 +40,7 @@ class ProfilesController extends Controller
     public function stageprofile ($tab = 'Overzicht') {
 
         $collection =[
-            'Overzicht'=>['Contact', 'Capaciteit', 'Genres', 'Gage', 'Locatie', 'Socials' ],
+            'Overzicht'=>['Contact', 'Zalen/Capaciteit', 'Genres', 'Gage', 'Locatie', 'Socials' ],
             "Agenda"=>["Kalender", "Shows"],
             'Technisch'=>["Equipment aanwezig", "Overig"],
             "Visueel"=>["Foto's", "Video"],

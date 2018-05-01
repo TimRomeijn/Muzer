@@ -135,7 +135,7 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" value="">
-                                Permanent
+                                Proffesioneel/beroeps
                             </label>
                         </div>
                     </li>
@@ -156,6 +156,9 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div class="panel-heading">
+                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             </div>
         </div>
     </div>
@@ -335,6 +338,9 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div class="panel-heading">
+                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             </div>
         </div>
     </div>
@@ -547,6 +553,9 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div class="panel-heading">
+                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             </div>
         </div>
     </div>
