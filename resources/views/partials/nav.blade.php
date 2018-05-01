@@ -10,17 +10,26 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Zoek</button>
         </form>
 
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Registreer</a>
-            </li>
-            <li class="nav-item">
-                <span class="oi oi-person" title="person" aria-hidden="true"></span>
-            </li>
-        </ul>
+
+        <div class="right-nav-items ml-auto">
+            <div class="advanced-search-nav-button ">
+                <a href="/advancedsearch">
+                    <button type="button" class="btn btn-primary">Geavanceerd zoeken</button>
+                </a>
+            </div>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registreer</a>
+                </li>
+                <li class="nav-item">
+                    <span class="oi oi-person" title="person" aria-hidden="true"></span>
+                </li>
+            </ul>
+        </div>
 
     </div>
 </nav>

@@ -9,7 +9,7 @@
   border: 1px solid black;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
   .filter-container {
     position: absolute;
     z-index: 1225;
