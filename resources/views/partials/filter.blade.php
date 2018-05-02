@@ -126,7 +126,7 @@
             </div>
             <div class="panel-heading" >
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-right" aria-hidden="true"></i>Soort muzikant</a>
+                    <a data-toggle="collapse" href="#collapse2"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Soort muzikant</a>
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
@@ -308,7 +308,7 @@
             </div>
             <div class="panel-heading" >
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse5"><i class="indicator fa fa-caret-right" aria-hidden="true"></i>Missende muzikanten</a>
+                    <a data-toggle="collapse" href="#collapse5"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Missende muzikanten</a>
                 </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse">
@@ -490,7 +490,7 @@
             </div>
             <div class="panel-heading" >
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse5"><i class="indicator fa fa-caret-right" aria-hidden="true"></i>Gage</a>
+                    <a data-toggle="collapse" href="#collapse5"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Gage</a>
                 </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse">
@@ -523,7 +523,7 @@
             </div>
             <div class="panel-heading" >
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse6"><i class="indicator fa fa-caret-right" aria-hidden="true"></i>Contract</a>
+                    <a data-toggle="collapse" href="#collapse6"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Contract</a>
                 </h4>
             </div>
             <div id="collapse6" class="panel-collapse collapse">

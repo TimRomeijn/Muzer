@@ -26,7 +26,9 @@
                     <a class="nav-link" href="#">Registreer</a>
                 </li>
                 <li class="nav-item">
-                    <span class="oi oi-person" title="person" aria-hidden="true"></span>
+                    <a href="#">
+                        <i class="fas fa-user fa-3x"></i>
+                    </a>
                 </li>
             </ul>
         </div>
