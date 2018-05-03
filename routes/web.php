@@ -48,3 +48,5 @@ Route::get('/profiles/stageprofile/{item}', 'ProfilesController@stageprofile');
 
 
 // Chat Routing
+
+Route::get('/profiles/{currentProfile}/chatsystem', 'ChatController@index');

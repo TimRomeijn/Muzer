@@ -17,7 +17,11 @@
                 <li>0698765432</li>
                 <li>Groningen, groningen</li>
             </ul>
-            <a href="#" class="btn btn-primary">Contact</a>
+            <a href="chatsystem">
+                <button type="button" class="btn btn-primary">
+                    <i class="far fa-comments fa-2x"></i>Contact/Chat
+                </button>
+            </a>
         </div>
     </div>
 
