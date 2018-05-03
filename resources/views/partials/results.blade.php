@@ -47,7 +47,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Band</h5>
                             <p class="card-text">Wat snelle informatie over het bandprofiel.</p>
-                            <a href="/profiles/musicianprofile/" class="btn btn-primary">Bekijk</a>
+                            <a href="/profiles/bandprofile/" class="btn btn-primary">Bekijk</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Podium</h5>
                             <p class="card-text">Wat snelle informatie over het podiumprofiel.</p>
-                            <a href="/profiles/musicianprofile/" class="btn btn-primary">Bekijk</a>
+                            <a href="/profiles/stageprofile/" class="btn btn-primary">Bekijk</a>
                         </div>
                     </div>
                 </div>
@@ -78,6 +78,4 @@
     {{--</div>--}}
 
 </div>
-
-
 

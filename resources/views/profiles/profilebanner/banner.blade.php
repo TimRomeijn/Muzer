@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="card-body">
-            <h5 class="card-title">ProfielNaam</h5>
+            <h5 class="card-title">{{ $currentProfile }}</h5>
             <ul class="card-text d-md-none d-sm-block">
                 <li>John Doe</li>
                 <li>john@email.com</li>

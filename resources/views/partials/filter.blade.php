@@ -523,7 +523,7 @@
             </div>
             <div class="panel-heading" >
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#collapse6"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Contract</a>
+                    <a data-toggle="collapse" href="#collapse6"><i class="indicator fa fa-caret-down" aria-hidden="true"></i>Contract aanwezig</a>
                 </h4>
             </div>
             <div id="collapse6" class="panel-collapse collapse">
