@@ -28,11 +28,11 @@
     <div class="card d-none d-md-inline col-sm-4">
         <div class="card-body">
             <h5 class="card-title">Algemene info</h5>
-            <ul class="banner-info-text">
-                <li>John Doe</li>
-                <li>john@email.com</li>
-                <li>0698765432</li>
-                <li>Groningen, groningen</li>
+            <ul class=" list-group banner-info-text">
+                <li class="list-group-item">John Doe</li>
+                <li class="list-group-item">john@email.com</li>
+                <li class="list-group-item">0698765432</li>
+                <li class="list-group-item">Groningen, groningen</li>
             </ul>
         </div>
     </div>
