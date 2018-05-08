@@ -7,7 +7,9 @@
 // $('.open-chat').on('click',function () {
 //     console.log('geklikt');
 // });
-$(".open-chat").click(function(){
-    $('.right-chat-container').toggle();
-    console.log('klik');
-});
+// $(".open-chat").click(function(){
+//     $(".right-chat-container").attr("style","display:block!important");
+//     console.log('klik');
+// });
+
+
