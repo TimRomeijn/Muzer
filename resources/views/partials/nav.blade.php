@@ -18,19 +18,37 @@
                 </a>
             </div>
 
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Registreer</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">
-                        <i class="fas fa-user fa-3x"></i>
-                    </a>
-                </li>
-            </ul>
+            @guest
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Registreer</a>
+                    </li>
+
+                    @else
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-user fa-3x"></i>
+                            <p>{{ Auth::user()->username }}</p>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="btn btn-primary" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
+
+            @endguest
         </div>
 
     </div>

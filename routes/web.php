@@ -50,3 +50,8 @@ Route::get('/profiles/stageprofile/{item}', 'ProfilesController@stageprofile');
 // Chat Routing
 
 Route::get('/chatsystem', 'ChatController@index');
+
+// Authentication Routing
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
