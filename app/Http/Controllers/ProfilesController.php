@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
+    public function selectprofiletype() {
+
+        return view('auth.selectprofiletype');
+    }
     public function musicianprofile ( $tab = 'Overzicht') {
 
         $collection = [
