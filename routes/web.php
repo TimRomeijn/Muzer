@@ -40,7 +40,7 @@ Route::get('/profiles/stageprofile', 'ProfilesController@stageprofile');
 
 
 //Profiles content routing
-Route::get('/profiles/musicianprofile/{item}', 'ProfilesController@musicianprofile')->name('musicianprofile');
+Route::get('/profiles/musicianprofile/{item}', 'ProfilesController@musicianprofile');
 
 Route::get('/profiles/bandprofile/{item}', 'ProfilesController@bandprofile');
 

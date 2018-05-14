@@ -1,3 +1,9 @@
+@php
+    $isMusician = isset($isMusician) ? $isMusician : false;
+    $isBand = isset($isBand) ? $isBand : false;
+    $isStage = isset($isStage) ? $isStage : false;
+
+@endphp
 <div class="card-group">
     <div class="card hovercard col-md-8">
         <div class="card-background">
@@ -28,12 +34,37 @@
     <div class="card d-none d-md-inline col-sm-4">
         <div class="card-body">
             <h5 class="card-title">Algemene info</h5>
-            <ul class=" list-group banner-info-text">
-                <li class="list-group-item">John Doe</li>
-                <li class="list-group-item">john@email.com</li>
-                <li class="list-group-item">0698765432</li>
-                <li class="list-group-item">Groningen, groningen</li>
-            </ul>
+            {{--@if($isMusician = $musicianprofile)--}}
+                @foreach($musicianprofile as $profile)
+                    <ul class=" list-group banner-info-text">
+                        <li class="list-group-item">{{ $profile->musicianname }}</li>
+                        <li class="list-group-item">{{ $profile->email }}</li>
+                        <li class="list-group-item">0{{ $profile->phonenumber }}</li>
+                        <li class="list-group-item">{{ $profile->location }}</li>
+                    </ul>
+                @endforeach
+
+            {{--@elseif($isBand = $bandprofile)--}}
+                {{--@foreach($bandprofile as $profile)--}}
+                    {{--<ul class=" list-group banner-info-text">--}}
+                        {{--<li class="list-group-item">{{ $profile->bandname }}</li>--}}
+                        {{--<li class="list-group-item">{{ $profile->email }}</li>--}}
+                        {{--<li class="list-group-item">{{ $profile->phonenumber }}</li>--}}
+                        {{--<li class="list-group-item">{{ $profile->location }}</li>--}}
+                    {{--</ul>--}}
+                {{--@endforeach--}}
+
+
+            {{--@else--}}
+                {{--@foreach($stageprofile as $profile)--}}
+                    {{--<ul class=" list-group banner-info-text">--}}
+                        {{--<li class="list-group-item">{{ $profile->stagename }}</li>--}}
+                        {{--<li class="list-group-item">{{ $profile->email }}</li>--}}
+                        {{--<li class="list-group-item">0{{ $profile->phonenumber }}</li>--}}
+                        {{--<li class="list-group-item">{{ $profile->location }}</li>--}}
+                    {{--</ul>--}}
+                {{--@endforeach--}}
+            {{--@endif--}}
         </div>
     </div>
 </div>

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\BandProfile;
+use App\MusicianProfile;
+use App\StageProfile;
+use App\User;
 use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
@@ -22,7 +26,9 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
 
-        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile'));
+        $musicianprofile = MusicianProfile::all();
+
+        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile','musicianprofile'));
     }
 
     public function bandprofile ( $tab = 'Overzicht') {
@@ -38,7 +44,9 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "bandprofile";
 
-        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile'));
+        $bandprofile = BandProfile::all();
+
+        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'bandprofile'));
     }
 
     public function stageprofile ($tab = 'Overzicht') {
@@ -55,7 +63,9 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
 
+        $stageprofile = StageProfile::all();
 
-        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile'));
+        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'stageprofile'));
     }
+
 }
