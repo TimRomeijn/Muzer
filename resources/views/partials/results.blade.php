@@ -20,12 +20,12 @@
                         </div>
                         <div class="card col-sm-8">
                             <div class="card-header">
-                                {{ $result->musicianname }}
+                                Muzikant
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Muzikant</h5>
+                                <h5 class="card-title">{{ $result->musicianname }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/musicianprofile/" class="btn btn-primary">Bekijk</a>
+                                <a href="/profiles/musicianprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>
                         </div>
                     </div>
@@ -40,12 +40,12 @@
                         </div>
                         <div class="card col-sm-8">
                             <div class="card-header">
-                                {{ $result->bandname }}
+                                Band
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Band</h5>
+                                <h5 class="card-title">{{ $result->bandname }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/bandprofile/" class="btn btn-primary">Bekijk</a>
+                                <a href="/profiles/bandprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $result->stagename }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/stageprofile/" class="btn btn-primary">Bekijk</a>
+                                <a href="/profiles/stageprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>
                         </div>
                     </div>

@@ -14,7 +14,7 @@ class ProfilesController extends Controller
 
         return view('auth.selectprofiletype');
     }
-    public function musicianprofile ( $tab = 'Overzicht') {
+    public function musicianprofile (  MusicianProfile $profile, $tab = 'Overzicht') {
 
         $collection = [
           'Overzicht'=>['Instrumenten', 'Genre', 'Regio/Locatie', 'Invloeden', 'Opzoek Naar', 'Soort Muzikant', 'Socials' ],
@@ -26,12 +26,12 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
 
-        $musicianprofile = MusicianProfile::all();
+//        $musicianprofile = MusicianProfile::all();
 
-        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile','musicianprofile'));
+        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile'));
     }
 
-    public function bandprofile ( $tab = 'Overzicht') {
+    public function bandprofile ( BandProfile $profile, $tab = 'Overzicht') {
 
         $collection =[
             'Overzicht'=>['Bio', 'Repertoire/Setlist', 'Regio/Locatie', 'Invloeden', 'Genre', 'Gage', 'Socials' ],
@@ -44,12 +44,12 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "bandprofile";
 
-        $bandprofile = BandProfile::all();
+//        $bandprofile = BandProfile::all();
 
-        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'bandprofile'));
+        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile'));
     }
 
-    public function stageprofile ($tab = 'Overzicht') {
+    public function stageprofile (StageProfile $profile, $tab = 'Overzicht') {
 
         $collection =[
             'Overzicht'=>['Contact', 'Zalen/Capaciteit', 'Genres', 'Gage', 'Locatie', 'Socials' ],
@@ -63,9 +63,9 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
 
-        $stageprofile = StageProfile::all();
+//        $stageprofile = StageProfile::all();
 
-        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'stageprofile'));
+        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
     }
 
     public function show(MusicianProfile $profile){

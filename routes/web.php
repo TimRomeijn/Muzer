@@ -32,17 +32,16 @@ Route::get('/advancedsearch/stagesearch', 'AdvancedSearchController@stagesearch'
 
 // Profiles Routing
 
-Route::get('/profiles/musicianprofile', 'ProfilesController@musicianprofile');
+Route::get('/profiles/musicianprofile/{profile}', 'ProfilesController@musicianprofile');
 
-Route::get('/profiles/bandprofile', 'ProfilesController@bandprofile');
+Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
-Route::get('/profiles/stageprofile', 'ProfilesController@stageprofile');
+Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
 
-Route::get('profiles/musicianprofile/{profile}', 'ProfilesController@show');
 
 
 //Profiles content routing
-Route::get('/profiles/musicianprofile/{item}', 'ProfilesController@musicianprofile');
+Route::get('/profiles/musicianprofile/{profile}/{item}', 'ProfilesController@musicianprofile');
 
 Route::get('/profiles/bandprofile/{item}', 'ProfilesController@bandprofile');
 
