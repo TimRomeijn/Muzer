@@ -68,4 +68,10 @@ class ProfilesController extends Controller
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'stageprofile'));
     }
 
+    public function show(MusicianProfile $profile){
+
+
+
+        return $profile;
+    }
 }
