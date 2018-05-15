@@ -23,7 +23,7 @@
                                 Muzikant
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">{{ $result->musicianname }}</h5>
+                                <h5 class="card-title">{{ $result->name }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
                                 <a href="/profiles/musicianprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>
@@ -43,7 +43,7 @@
                                 Band
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">{{ $result->bandname }}</h5>
+                                <h5 class="card-title">{{ $result->name }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
                                 <a href="/profiles/bandprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>

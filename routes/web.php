@@ -43,9 +43,9 @@ Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile'
 //Profiles content routing
 Route::get('/profiles/musicianprofile/{profile}/{item}', 'ProfilesController@musicianprofile');
 
-Route::get('/profiles/bandprofile/{item}', 'ProfilesController@bandprofile');
+Route::get('/profiles/bandprofile/{profile}/{item}', 'ProfilesController@bandprofile');
 
-Route::get('/profiles/stageprofile/{item}', 'ProfilesController@stageprofile');
+Route::get('/profiles/stageprofile/{profile}/{item}', 'ProfilesController@stageprofile');
 
 
 // Chat Routing

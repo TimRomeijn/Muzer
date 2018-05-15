@@ -1,9 +1,9 @@
-@php
-    $isMusician = isset($isMusician) ? $isMusician : false;
-    $isBand = isset($isBand) ? $isBand : false;
-    $isStage = isset($isStage) ? $isStage : false;
+{{--@php--}}
+    {{--$isMusician = isset($isMusician) ? $isMusician : false;--}}
+    {{--$isBand = isset($isBand) ? $isBand : false;--}}
+    {{--$isStage = isset($isStage) ? $isStage : false;--}}
 
-@endphp
+{{--@endphp--}}
 <div class="card-group">
     <div class="card hovercard col-md-8">
         <div class="card-background">
@@ -16,12 +16,12 @@
             </a>
         </div>
         <div class="card-body">
-            <h5 class="card-title">{{ $currentProfile }}</h5>
+            <h5 class="card-title">{{ $profile->name }}</h5>
             <ul class="card-text d-md-none d-sm-block">
-                <li>John Doe</li>
-                <li>john@email.com</li>
-                <li>0698765432</li>
-                <li>Groningen, groningen</li>
+                <li>{{ $profile->name }}</li>
+                <li>{{ $profile->email }}</li>
+                <li>0{{ $profile->phonenumber }}</li>
+                <li>{{ $profile->location }}</li>
             </ul>
             <a href="/chatsystem">
                 <button type="button" class="btn btn-primary">
@@ -35,10 +35,10 @@
         <div class="card-body">
             <h5 class="card-title">Algemene info</h5>
             <ul class=" list-group banner-info-text">
-                <li class="list-group-item">John Doe</li>
-                <li class="list-group-item">john@email.com</li>
-                <li class="list-group-item">0698765432</li>
-                <li class="list-group-item">Groningen, groningen</li>
+                <li class="list-group-item">{{ $profile->name }}</li>
+                <li class="list-group-item">{{ $profile->email }}</li>
+                <li class="list-group-item">0{{ $profile->phonenumber }}</li>
+                <li class="list-group-item">{{ $profile->location }}</li>
             </ul>
         </div>
     </div>

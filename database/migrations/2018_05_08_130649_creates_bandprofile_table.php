@@ -15,7 +15,7 @@ class CreatesBandprofileTable extends Migration
     {
         Schema::create('bandprofile', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('bandname');
+            $table->string('name');
             $table->string('email');
             $table->integer('phonenumber');
             $table->string('location');

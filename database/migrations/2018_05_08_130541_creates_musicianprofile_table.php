@@ -13,9 +13,9 @@ class CreatesMusicianprofileTable extends Migration
      */
     public function up()
     {
-        Schema::create('musicianprofile', function (Blueprint $table) {
+        Schema::create('musician_profiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('musicianname');
+            $table->string('name');
             $table->string('email');
             $table->integer('phonenumber');
             $table->string('location');
