@@ -17,11 +17,11 @@
         </div>
         <div class="card-body">
             <h5 class="card-title">{{ $profile->name }}</h5>
-            <ul class="card-text d-md-none d-sm-block">
-                <li>{{ $profile->name }}</li>
-                <li>{{ $profile->email }}</li>
-                <li>0{{ $profile->phonenumber }}</li>
-                <li>{{ $profile->location }}</li>
+            <ul class="list-group card-text d-md-none d-sm-block">
+                <li class="list-group-item">{{ $profile->name }}</li>
+                <li class="list-group-item">{{ $profile->email }}</li>
+                <li class="list-group-item">0{{ $profile->phonenumber }}</li>
+                <li class="list-group-item">{{ $profile->location }}</li>
             </ul>
             <a href="/chatsystem">
                 <button type="button" class="btn btn-primary">

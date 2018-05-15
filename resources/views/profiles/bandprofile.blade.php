@@ -35,6 +35,10 @@
                     <p class="bandmember-text">Naam2</p>
                     <i class="fas fa-user fa-3x bandmember-icon"></i>
                     <p class="bandmember-text">Naam3</p>
+                    {{--@foreach($bandprofile->musicianprofile as $profile)--}}
+                        {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
+                        {{--<p class="bandmember-text">{{ $profile->name }}</p>--}}
+                    {{--@endforeach--}}
                 </div>
                 <div class="add-bandmember-button">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmemberModal">
