@@ -29,16 +29,10 @@
             </div>
             <div class="card-body">
                 <div class="bandmembers">
-                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
-                    {{--<p class="bandmember-text">Naam1</p>--}}
-                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
-                    {{--<p class="bandmember-text">Naam2</p>--}}
-                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
-                    {{--<p class="bandmember-text">Naam3</p>--}}
-                    @foreach($musicianprofiles as $profile)
+                    @foreach($musicianprofiles as $mprofile)
                         <i class="fas fa-user fa-3x bandmember-icon"></i>
-                        <a href="/profiles/musicianprofile/{{ $profile->id }}">
-                            <p class="bandmember-text">{{ $profile->name }}</p>
+                        <a href="/profiles/musicianprofile/{{ $mprofile->id }}">
+                            <p class="bandmember-text">{{ $mprofile->name }}</p>
                         </a>
                     @endforeach
                 </div>

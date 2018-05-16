@@ -26,8 +26,6 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
 
-//        $musicianprofiles = MusicianProfile::all();
-
         return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile'));
     }
 
@@ -44,12 +42,10 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "bandprofile";
 
-//        $bandprofile = BandProfile::all();
-        $musicianprofiles = MusicianProfile::all();
+        $musicianprofiles = MusicianProfile::all()->where('band_id', '=',  $profile->id);
+        $stageprofiles = StageProfile::all();
 
-//        dd($musicianprofiles);
-
-        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'bandprofile'));
+        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles'));
     }
 
     public function stageprofile (StageProfile $profile, $tab = 'Overzicht') {
@@ -65,8 +61,6 @@ class ProfilesController extends Controller
         $tabs = array_keys($collection);
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
-
-//        $stageprofile = StageProfile::all();
 
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
     }

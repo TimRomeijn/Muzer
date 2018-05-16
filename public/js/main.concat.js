@@ -21,6 +21,8 @@
 //     el: '#app'
 // });
 
+$("a[href*='" + location.pathname + "']").addClass("current");
+
 // $('.right-chat-container').on('.open-chat', function () {
 //     $(this)
 //         .toggleClass('test-toggle');

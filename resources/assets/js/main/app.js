@@ -20,3 +20,5 @@
 // const app = new Vue({
 //     el: '#app'
 // });
+
+$("a[href*='" + location.pathname + "']").addClass("current");

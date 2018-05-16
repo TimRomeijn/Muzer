@@ -21,6 +21,8 @@ class CreatesMusicianprofileTable extends Migration
             $table->string('location');
             $table->string('profilepic');
             $table->string('bannerpic');
+            $table->integer('band_id')->unsigned();
+            $table->foreign('band_id')->references('id')->on('band_profiles');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->rememberToken();
@@ -35,6 +37,6 @@ class CreatesMusicianprofileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('musicianprofile');
+        Schema::dropIfExists('musician_profiles');
     }
 }

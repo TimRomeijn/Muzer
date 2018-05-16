@@ -12,8 +12,9 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Kies uw profiel</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                            <option>{{ $currentProfile }}</option>
-                            <option>Ander profiel als je er meer hebt.</option>
+                            @foreach($stageprofiles as $sprofile)
+                                <option>{{ $sprofile->name }}</option>
+                            @endforeach
                         </select>
                         <small id="profileHelp" class="form-text text-muted">Kies hier het profiel dat de band kan bekijken voor de boeking.</small>
                     </div>

@@ -21,8 +21,8 @@ class CreatesBandprofileTable extends Migration
             $table->string('location');
             $table->string('profilepic');
             $table->string('bannerpic');
-            $table->foreign('musician_id')->references('id')->on('musicianprofile');
-            $table->integer('musician_id')->unsigned();
+//            $table->foreign('musician_id')->references('id')->on('musicianprofile');
+//            $table->integer('musician_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('user_id')->unsigned();
             $table->rememberToken();
