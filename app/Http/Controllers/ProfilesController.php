@@ -12,6 +12,7 @@ class ProfilesController extends Controller
 {
     public function selectprofiletype() {
 
+
         return view('auth.selectprofiletype');
     }
     public function musicianprofile (  MusicianProfile $profile, $tab = 'Overzicht') {
@@ -63,5 +64,15 @@ class ProfilesController extends Controller
         $currentProfile = "stageprofile";
 
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
+    }
+
+    public function store(MusicianProfile $profile) {
+
+        MusicianProfile::create([
+
+        ]);
+
+
+        dd(Request()->all());
     }
 }

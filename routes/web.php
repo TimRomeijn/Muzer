@@ -38,6 +38,8 @@ Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
 Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
 
+Route::post('/profiles/make-profile-musician', 'ProfilesController@store');
+
 
 
 //Profiles content routing

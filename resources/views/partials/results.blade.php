@@ -63,7 +63,7 @@
                                 Podium
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">{{ $result->stagename }}</h5>
+                                <h5 class="card-title">{{ $result->name }}</h5>
                                 <p class="card-text">{{ $result->location }}</p>
                                 <a href="/profiles/stageprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
                             </div>

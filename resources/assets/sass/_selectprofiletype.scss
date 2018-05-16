@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.sub-button-text {
+  text-align: center;
+}
+
 @include media-breakpoint-up(sm) {
 
   .profile-type-button {
