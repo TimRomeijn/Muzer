@@ -12,21 +12,7 @@
                     Profieltypes
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/profiles/make-profile-musician">
-
-                        {{csrf_field()}}
-
-                        <a href="profiles/musicianprofile">
-                            <button type="submit" name="create-musician" class="btn btn-primary btn-block profile-type-button">Muzikant</button>
-                        </a>
-                    </form>
-
-                    <a href="profiles/bandprofile">
-                        <button type="button" class="btn btn-primary btn-block profile-type-button">Band</button>
-                    </a>
-                    <a href="profiles/stageprofile">
-                        <button type="button" class="btn btn-primary btn-block profile-type-button">Podium</button>
-                    </a>
+                    <button type="button" class="btn btn-primary btn-block profile-type-button" data-toggle="modal" data-target="#createprofileModal">Kies een profiel</button>
                 </div>
             </div>
             <div class="sub-button-text">
@@ -38,6 +24,8 @@
                 </a>
             </div>
         </div>
+
+        @include('partials.modals.profilecreationmodal')
 
 
     @endsection

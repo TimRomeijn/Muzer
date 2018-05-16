@@ -66,11 +66,7 @@ class ProfilesController extends Controller
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
     }
 
-    public function store(MusicianProfile $profile) {
-
-        MusicianProfile::create([
-
-        ]);
+    public function store() {
 
 
         dd(Request()->all());
