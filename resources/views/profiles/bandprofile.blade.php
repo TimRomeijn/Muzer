@@ -29,16 +29,18 @@
             </div>
             <div class="card-body">
                 <div class="bandmembers">
-                    <i class="fas fa-user fa-3x bandmember-icon"></i>
-                    <p class="bandmember-text">Naam1</p>
-                    <i class="fas fa-user fa-3x bandmember-icon"></i>
-                    <p class="bandmember-text">Naam2</p>
-                    <i class="fas fa-user fa-3x bandmember-icon"></i>
-                    <p class="bandmember-text">Naam3</p>
-                    {{--@foreach($bandprofile->musicianprofile as $profile)--}}
-                        {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
-                        {{--<p class="bandmember-text">{{ $profile->name }}</p>--}}
-                    {{--@endforeach--}}
+                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
+                    {{--<p class="bandmember-text">Naam1</p>--}}
+                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
+                    {{--<p class="bandmember-text">Naam2</p>--}}
+                    {{--<i class="fas fa-user fa-3x bandmember-icon"></i>--}}
+                    {{--<p class="bandmember-text">Naam3</p>--}}
+                    @foreach($musicianprofiles as $profile)
+                        <i class="fas fa-user fa-3x bandmember-icon"></i>
+                        <a href="/profiles/musicianprofile/{{ $profile->id }}">
+                            <p class="bandmember-text">{{ $profile->name }}</p>
+                        </a>
+                    @endforeach
                 </div>
                 <div class="add-bandmember-button">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmemberModal">

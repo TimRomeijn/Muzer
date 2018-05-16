@@ -44,8 +44,10 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "bandprofile";
 
-        $bandprofile = BandProfile::all();
+//        $bandprofile = BandProfile::all();
         $musicianprofiles = MusicianProfile::all();
+
+//        dd($musicianprofiles);
 
         return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'bandprofile'));
     }
