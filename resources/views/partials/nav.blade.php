@@ -18,6 +18,12 @@
                 </a>
             </div>
 
+            <div class="select-profile-type-button ">
+                <a href="/selectprofiletype">
+                    <button type="button" class="btn btn-primary">Maak een profiel</button>
+                </a>
+            </div>
+
             @guest
 
                 <ul class="navbar-nav">

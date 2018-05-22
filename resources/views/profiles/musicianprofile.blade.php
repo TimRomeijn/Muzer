@@ -19,6 +19,22 @@
             </div>
         </div>
 
+        <div class="card text-center add-bandmember-card">
+            <div class="card-header">
+                Huidige band(s)
+            </div>
+            <div class="card-body">
+                <div class="bandmembers">
+                    @foreach($bandprofiles as $bprofile)
+                        <i class="fas fa-users fa-3x bandmember-icon"></i>
+                        <a href="/profiles/bandprofile/{{ $bprofile->id }}">
+                            <p class="bandmember-text">{{ $bprofile->name }}</p>
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="left-container col-sm-8">

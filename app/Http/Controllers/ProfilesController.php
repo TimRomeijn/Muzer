@@ -32,7 +32,10 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
 
-        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile'));
+//        $musicianprofiles = MusicianProfile::all();
+        $bandprofiles = BandProfile::all()->where('id','=',$profile->band_id);
+
+        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles'));
     }
 
     public function bandprofile ( BandProfile $profile, $tab = 'Overzicht') {
