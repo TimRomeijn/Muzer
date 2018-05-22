@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth',['only' =>['selectprofiletype']]);
+    }
+
     public function selectprofiletype() {
 
 
@@ -63,12 +68,32 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
 
+
+
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
     }
 
-    public function store() {
+    public function store(request $request) {
 
+        //Form-validation for these fields
+        $this->validate(request(),[
+            'name' => 'required',
+            'email' => 'required',
+            'location' => 'required',
+        ]);
 
-        dd(Request()->all());
+        $profile = new MusicianProfile();
+
+        $profile->user_id = auth()->user()->id;
+        $profile->name = $request->name;
+        $profile->email = $request->email;
+        $profile->phonenumber = $request->phonenumber;
+        $profile->location = $request->location;
+        $profile->save([$profile]);
+
+        //rederict to profile
+
+        return redirect('/home');
+
     }
 }

@@ -38,7 +38,7 @@ Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
 Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
 
-Route::post('/profiles/make-profile', 'ProfilesController@store');
+
 
 
 
@@ -59,4 +59,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+//Profile creation
+
 Route::get('/selectprofiletype', 'ProfilesController@selectprofiletype');
+
+Route::post('/profiles/addprofile', 'ProfilesController@store');
+
+
