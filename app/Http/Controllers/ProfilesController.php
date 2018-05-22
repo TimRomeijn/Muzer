@@ -85,8 +85,21 @@ class ProfilesController extends Controller
             'location' => 'required',
         ]);
 
-        $profile = new MusicianProfile();
+        $profile = $request->get('profile-types');
 
+        switch ($profile) {
+            case "musician-profile":
+                $profile = new MusicianProfile();
+                break;
+            case "band-profile":
+                $profile = new BandProfile();
+                break;
+            case "stage-profile":
+                $profile = new StageProfile();
+                break;
+            default:
+                $profile = new MusicianProfile();
+        }
         $profile->user_id = auth()->user()->id;
         $profile->name = $request->name;
         $profile->email = $request->email;
@@ -94,7 +107,7 @@ class ProfilesController extends Controller
         $profile->location = $request->location;
         $profile->save([$profile]);
 
-        //rederict to profile
+        //TODO: Redirect to created profile
 
         return redirect('/home');
 
