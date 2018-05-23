@@ -38,7 +38,7 @@ Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
 Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
 
-Route::view('/profiles/{currentprofile}/{profile}', 'currentprofile')->name('currentprofile');
+//Route::view('/profiles/{currentprofile}/{profile}', 'currentprofile')->name('currentprofile');
 
 
 
