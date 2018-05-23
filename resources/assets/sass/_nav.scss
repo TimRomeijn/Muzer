@@ -4,3 +4,11 @@
 .navbar {
   border-bottom: 1px solid;
 }
+
+@include media-breakpoint-up(sm) {
+
+  .s-p-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

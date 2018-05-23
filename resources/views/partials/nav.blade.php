@@ -20,7 +20,7 @@
 
             <div class="select-profile-type-button ">
                 <a href="/selectprofiletype">
-                    <button type="button" class="btn btn-primary">Maak een profiel</button>
+                    <button type="button" class="btn btn-primary s-p-button">Maak een profiel</button>
                 </a>
             </div>
 
@@ -35,12 +35,23 @@
                     </li>
 
                     @else
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="fas fa-user fa-3x"></i>
-                            <p>{{ Auth::user()->username }}</p>
-                        </a>
-                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mijn accounts
+                        </button>
+                        <p>{{ Auth::user()->username }}</p>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @foreach($profileAccounts as $pfa)
+                                <a class="dropdown-item" href="#">{{ $pfa->name }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+                    {{--<li class="nav-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                        {{--<a href="#">--}}
+                            {{--<i class="fas fa-user fa-3x"></i>--}}
+                            {{--<p>{{ Auth::user()->username }}</p>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
                     <li class="nav-link">
                         <a class="btn btn-primary" href="{{ route('logout') }}"
                            onclick="event.preventDefault();

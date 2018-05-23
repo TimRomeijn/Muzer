@@ -65,9 +65,6 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
                     <button type="submit" id="profileCreateSubmit" class="btn btn-primary">Maak profiel</button>
-                    {{--data-dismiss="modal"--}}
-
-
                 </div>
             </div>
 

@@ -7,6 +7,7 @@ use App\MusicianProfile;
 use App\StageProfile;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfilesController extends Controller
 {
@@ -16,7 +17,6 @@ class ProfilesController extends Controller
     }
 
     public function selectprofiletype() {
-
 
         return view('auth.selectprofiletype');
     }
@@ -32,7 +32,6 @@ class ProfilesController extends Controller
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
 
-//        $musicianprofiles = MusicianProfile::all();
         $bandprofiles = BandProfile::all()->where('id','=',$profile->band_id);
 
         return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles'));
@@ -70,8 +69,6 @@ class ProfilesController extends Controller
         $tabs = array_keys($collection);
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
-
-
 
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
     }
