@@ -48,6 +48,8 @@ Route::get('/profiles/stageprofile/{profile}/{item}', 'ProfilesController@stagep
 
 Route::post('/profiles/editcontent', 'BlocksController@update');
 
+//Route::get('/profiles/editcontent', 'BlocksController@update');
+
 
 
 // Chat Routing

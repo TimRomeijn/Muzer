@@ -21,6 +21,8 @@ class BlocksController extends Controller
         $content->type = $request->type;
         $content->save([$content]);
 
-        return redirect('/');
+//        dd($request->server('HTTP_REFERER'));
+
+        return redirect($request->server('HTTP_REFERER'));
     }
 }
