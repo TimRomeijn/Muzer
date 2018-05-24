@@ -6,7 +6,7 @@
                 <div class="card col-md">
                     <div class="card-body">
                         <h5 class="card-title">{{ $value }}</h5>
-                        <button type="button" class="btn btn-info">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editContentModal">
                             <span class="oi oi-pencil" title="pencil" aria-hidden="true"></span>Edit
                         </button>
                         <h6 class="card-subtitle mb-2 text-muted"></h6>
@@ -23,4 +23,6 @@
         </div>
     </div>
 </div>
+
+@include('partials.modals.editcontentmodal')
 

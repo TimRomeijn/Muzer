@@ -38,12 +38,6 @@ Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
 Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
 
-//Route::view('/profiles/{currentprofile}/{profile}', 'currentprofile')->name('currentprofile');
-
-
-
-
-
 
 //Profiles content routing
 Route::get('/profiles/musicianprofile/{profile}/{item}', 'ProfilesController@musicianprofile');
@@ -51,6 +45,8 @@ Route::get('/profiles/musicianprofile/{profile}/{item}', 'ProfilesController@mus
 Route::get('/profiles/bandprofile/{profile}/{item}', 'ProfilesController@bandprofile');
 
 Route::get('/profiles/stageprofile/{profile}/{item}', 'ProfilesController@stageprofile');
+
+Route::post('/profiles/editcontent', 'BlocksController@update');
 
 
 
