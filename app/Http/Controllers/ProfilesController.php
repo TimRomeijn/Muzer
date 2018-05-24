@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BandProfile;
+use App\Block;
 use App\MusicianProfile;
 use App\StageProfile;
 use App\User;
@@ -13,64 +14,91 @@ class ProfilesController extends Controller
 {
     public function __construct()
     {
+
         $this->middleware('auth',['only' =>['selectprofiletype']]);
+    }
+
+    public function getTabsByProfile($profile) {
+        $tabs["musician"] = [
+            'Overzicht'=>[1 => 'Instrumenten', 2 => 'Genre', 3=> 'Regio/Locatie', 4=> 'Invloeden', 5=>'Opzoek Naar', 6=>'Soort Muzikant', 7=>'Socials' ],
+            'Materiaal'=>[8 => "Muziek", 9 => "Video", 10 => "Foto's"],
+            "Planning"=>[11 =>"Planning", 12 => "Tijdsbeschikking"],
+            "Reviews"=>[13 => "Reviewtitel"]
+        ];
+
+        $tabs["band"] = [
+            'Overzicht'=>[14 => 'Bio', 15=> 'Repertoire/Setlist', 16 => 'Regio/Locatie', 17 => 'Invloeden', 18 => 'Genre',  19 => 'Gage',  20 => 'Socials' ],
+            'Materiaal'=>[21 => "Muziek",22 => "Video",23 => "Foto's"],
+            "Planning"=>[24 =>"Planning", 25 => "Tijdsbeschikking", 26 => "Shows"],
+            "Downloads"=>[27 =>"Foto's",28 => "Riders/Stageplans",29 => "CV", 30 =>"Contract", 31 => "Perskit"],
+            "Reviews"=>[ 32 => "Reviewtitel"]
+        ];
+        $tabs["stage"] = [
+            'Overzicht'=>[33 => 'Contact', 34 => 'Zalen/Capaciteit', 35 => 'Genres', 36 => 'Gage', 37 =>'Locatie', 38 => 'Socials' ],
+            "Agenda"=>[39 => "Kalender", 40 => "Shows"],
+            'Technisch'=>[41 => "Equipment aanwezig", 42 => "Overig"],
+            "Visueel"=>[43 => "Foto's", 44 => "Video"],
+            "Reviews"=>[45 =>"Reviewtitel"],
+            "Downloads"=>[46 => "Contract", 47 => "Stageplan", 48 => "Riders"]
+        ];
+
+        return $tabs[$profile];
     }
 
     public function selectprofiletype() {
 
+
         return view('auth.selectprofiletype');
     }
+
     public function musicianprofile (  MusicianProfile $profile, $tab = 'Overzicht') {
 
-        $collection = [
-          'Overzicht'=>['Instrumenten', 'Genre', 'Regio/Locatie', 'Invloeden', 'Opzoek Naar', 'Soort Muzikant', 'Socials' ],
-          'Materiaal'=>["Muziek", "Video", "Foto's"],
-          "Planning"=>["Planning", "Tijdsbeschikking"],
-          "Reviews"=>["Reviewtitel"]
-        ];
+        $collection = $this->getTabsByProfile("musician");
         $tabs = array_keys($collection);
         $blocks = $collection[$tab];
         $currentProfile = "musicianprofile";
+        $blockdata = Block::all()->where('type', '=', 1);
+        $newData = [];
+        foreach($blockdata as $data) {
+            $newData[$data['tab_id']] = $data['text'];
+        }
 
         $bandprofiles = BandProfile::all()->where('id','=',$profile->band_id);
 
-        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles'));
+        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles','newData'));
     }
 
     public function bandprofile ( BandProfile $profile, $tab = 'Overzicht') {
 
-        $collection =[
-            'Overzicht'=>['Bio', 'Repertoire/Setlist', 'Regio/Locatie', 'Invloeden', 'Genre', 'Gage', 'Socials' ],
-            'Materiaal'=>["Muziek", "Video", "Foto's"],
-            "Planning"=>["Planning", "Tijdsbeschikking", "Shows"],
-            "Downloads"=>["Foto's", "Riders/Stageplans", "CV", "Contract", "Perskit"],
-            "Reviews"=>["Reviewtitel"]
-        ];
+        $collection =  $this->getTabsByProfile("band");
         $tabs = array_keys($collection);
         $blocks = $collection[$tab];
         $currentProfile = "bandprofile";
+        $blockdata = Block::all()->where('type', '=', 2);
+        $newData = [];
+        foreach($blockdata as $data) {
+            $newData[$data['tab_id']] = $data['text'];
+        }
 
         $musicianprofiles = MusicianProfile::all()->where('band_id', '=',  $profile->id);
         $stageprofiles = StageProfile::all();
 
-        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles'));
+        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles','newData'));
     }
 
     public function stageprofile (StageProfile $profile, $tab = 'Overzicht') {
 
-        $collection =[
-            'Overzicht'=>['Contact', 'Zalen/Capaciteit', 'Genres', 'Gage', 'Locatie', 'Socials' ],
-            "Agenda"=>["Kalender", "Shows"],
-            'Technisch'=>["Equipment aanwezig", "Overig"],
-            "Visueel"=>["Foto's", "Video"],
-            "Reviews"=>["Reviewtitel"],
-            "Downloads"=>["Contract", "Stageplan", "Riders"]
-        ];
+        $collection = $this->getTabsByProfile("stage");
         $tabs = array_keys($collection);
         $blocks = $collection[$tab];
         $currentProfile = "stageprofile";
+        $blockdata = Block::all()->where('type', '=', 3);
+        $newData = [];
+        foreach($blockdata as $data) {
+            $newData[$data['tab_id']] = $data['text'];
+        }
 
-        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile'));
+        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData'));
     }
 
     public function store(request $request) {
