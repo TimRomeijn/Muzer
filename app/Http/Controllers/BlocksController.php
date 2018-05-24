@@ -15,7 +15,10 @@ class BlocksController extends Controller
         $content = new Block;
 
         //Request the input data and save/update it
-        $content->text = $request->contentje;
+        //dd($request->all());
+        $content->text = $request->contents;
+        $content->tab_id = $request->tabid;
+        $content->type = $request->type;
         $content->save([$content]);
 
         return redirect('/');

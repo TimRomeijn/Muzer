@@ -62,10 +62,10 @@ class ProfilesController extends Controller
         foreach($blockdata as $data) {
             $newData[$data['tab_id']] = $data['text'];
         }
-
         $bandprofiles = BandProfile::all()->where('id','=',$profile->band_id);
+        $type = '1';
 
-        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles','newData'));
+        return view('profiles.musicianprofile' ,compact('tabs', 'blocks', 'currentProfile' , 'profile', 'bandprofiles','newData', 'type'));
     }
 
     public function bandprofile ( BandProfile $profile, $tab = 'Overzicht') {
@@ -82,8 +82,9 @@ class ProfilesController extends Controller
 
         $musicianprofiles = MusicianProfile::all()->where('band_id', '=',  $profile->id);
         $stageprofiles = StageProfile::all();
+        $type = '2';
 
-        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles','newData'));
+        return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles','newData', 'type'));
     }
 
     public function stageprofile (StageProfile $profile, $tab = 'Overzicht') {
@@ -98,7 +99,9 @@ class ProfilesController extends Controller
             $newData[$data['tab_id']] = $data['text'];
         }
 
-        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData'));
+        $type = '3';
+
+        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData', 'type'));
     }
 
     public function store(request $request) {

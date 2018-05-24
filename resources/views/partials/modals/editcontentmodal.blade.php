@@ -16,7 +16,11 @@
 
                     <div class="form-group">
                         <label for="exampleInputConten">Content</label>
-                        <textarea type="text" name="contentje" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer hier de nieuwe content in..."></textarea>
+                        <div class="hiddenInputs">
+                            <input type="text" id="tabid" value="" name="tabid">
+                            <input type="text" id="type" value="" name="type">
+                        </div>
+                        <textarea type="text" name="contents" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $v }}"></textarea>
                         <small id="contentHelp" class="form-text text-muted">Voer hier de content in die de oude content zal vervangen.</small>
                     </div>
 
