@@ -1,3 +1,4 @@
+<form name="filter-form" id="filter-form" method="GET" action="/advancedsearch/filter">
 @if($isMusician)
     <div id="accordion" class="panel panel-primary behclick-panel">
         <div class="panel-heading">
@@ -19,7 +20,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Rock">
+                                <input name="genre" class="filter-input" type="checkbox" value="Rock">
                                 Rock
                             </label>
                         </div>
@@ -27,7 +28,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="Pop">
+                                <input name="genre" class="filter-input" type="checkbox" value="Pop">
                                 Pop
                             </label>
                         </div>
@@ -35,7 +36,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Metal">
+                                <input name="genre" class="filter-input" type="checkbox" value="Metal">
                                 Metal
                             </label>
                         </div>
@@ -43,7 +44,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Jazz">
+                                <input name="genre" class="filter-input" type="checkbox" value="Jazz">
                                 Jazz
                             </label>
                         </div>
@@ -59,20 +60,20 @@
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse in" >
-                <select class="custom-select">
+                <select name="location" class="custom-select filter-input">
                     <option selected>Selecteer de provincie</option>
-                    <option value="1">Zuid-Holland</option>
-                    <option value="2">Noord-Holland</option>
-                    <option value="3">Noord-Brabant</option>
-                    <option value="4">Groningen</option>
-                    <option value="5">Gelderland</option>
-                    <option value="6">Flevoland</option>
-                    <option value="7">Zeeland</option>
-                    <option value="8">Overijssel</option>
-                    <option value="9">Limburg</option>
-                    <option value="10">Friesland</option>
-                    <option value="11">Drenthe</option>
-                    <option value="12">Utrecht</option>
+                    <option value="Zuid-Holland">Zuid-Holland</option>
+                    <option value="Noord-Holland">Noord-Holland</option>
+                    <option value="Noord-Brabant">Noord-Brabant</option>
+                    <option value="Groningen">Groningen</option>
+                    <option value="Gelderland">Gelderland</option>
+                    <option value="Flevoland">Flevoland</option>
+                    <option value="Zeeland">Zeeland</option>
+                    <option value="Overijssel">Overijssel</option>
+                    <option value="Limburg">Limburg</option>
+                    <option value="Friesland">Friesland</option>
+                    <option value="Drenthe">Drenthe</option>
+                    <option value="Utrecht">Utrecht</option>
                 </select>
             </div>
             <div class="panel-heading" >
@@ -85,7 +86,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="instruments" class="filter-input" type="checkbox" value="Gitaar(Elektrisch)">
                                 Gitaar(Elektrisch)
                             </label>
                         </div>
@@ -93,7 +94,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="instruments" class="filter-input" type="checkbox" value="Basgitaar">
                                 Basgitaar
                             </label>
                         </div>
@@ -101,7 +102,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="instruments" class="filter-input" type="checkbox" value="Drums">
                                 Drums
                             </label>
                         </div>
@@ -109,7 +110,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="instruments" class="filter-input" type="checkbox" value="Vocals">
                                 Vocals
                             </label>
                         </div>
@@ -117,7 +118,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="instruments" class="filter-input" type="checkbox" value="Overig">
                                 Overig
                             </label>
                         </div>
@@ -134,7 +135,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="typemusician" class="filter-input" type="checkbox" value="Proffesioneel/beroeps">
                                 Proffesioneel/beroeps
                             </label>
                         </div>
@@ -142,7 +143,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="typemusician" class="filter-input" type="checkbox" value="Hobby">
                                 Hobby
                             </label>
                         </div>
@@ -150,7 +151,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="">
+                                <input name="typemusician" class="filter-input" type="checkbox" value="Sessie">
                                 Sessie
                             </label>
                         </div>
@@ -184,7 +185,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Rock">
+                                <input name="genre" class="filter-input" type="checkbox" value="Rock">
                                 Rock
                             </label>
                         </div>
@@ -192,7 +193,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="Pop">
+                                <input name="genre" class="filter-input" type="checkbox" value="Pop">
                                 Pop
                             </label>
                         </div>
@@ -200,7 +201,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Metal">
+                                <input name="genre" class="filter-input" type="checkbox" value="Metal">
                                 Metal
                             </label>
                         </div>
@@ -208,7 +209,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Jazz">
+                                <input name="genre" class="filter-input" type="checkbox" value="Jazz">
                                 Jazz
                             </label>
                         </div>
@@ -228,7 +229,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Bandnaam" aria-label="BandNaam" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button">Zoek</button>
+                        <button class="btn btn-outline-primary filter-input" type="button">Zoek</button>
                     </div>
                 </div>
             </div>
@@ -241,20 +242,20 @@
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse in" >
-                <select class="custom-select">
+                <select name="location" class="filter-input custom-select">
                     <option selected>Selecteer de provincie</option>
-                    <option value="1">Zuid-Holland</option>
-                    <option value="2">Noord-Holland</option>
-                    <option value="3">Noord-Brabant</option>
-                    <option value="4">Groningen</option>
-                    <option value="5">Gelderland</option>
-                    <option value="6">Flevoland</option>
-                    <option value="7">Zeeland</option>
-                    <option value="8">Overijssel</option>
-                    <option value="9">Limburg</option>
-                    <option value="10">Friesland</option>
-                    <option value="11">Drenthe</option>
-                    <option value="12">Utrecht</option>
+                    <option value="Zuid-Holland">Zuid-Holland</option>
+                    <option value="Noord-Holland">Noord-Holland</option>
+                    <option value="Noord-Brabant">Noord-Brabant</option>
+                    <option value="Groningen">Groningen</option>
+                    <option value="Gelderland">Gelderland</option>
+                    <option value="Flevoland">Flevoland</option>
+                    <option value="Zeeland">Zeeland</option>
+                    <option value="Overijssel">Overijssel</option>
+                    <option value="Limburg">Limburg</option>
+                    <option value="Friesland">Friesland</option>
+                    <option value="Drenthe">Drenthe</option>
+                    <option value="Utrecht">Utrecht</option>
                 </select>
             </div>
             <div class="panel-heading" >
@@ -267,7 +268,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="0-1">
+                                <input name="timemanagement" class="filter-input" type="checkbox" value="0-1">
                                 0-1 x per week
                             </label>
                         </div>
@@ -275,7 +276,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="1-3">
+                                <input name="timemanagement" class="filter-input" type="checkbox" value="1-3">
                                 1-3 x per week
                             </label>
                         </div>
@@ -283,7 +284,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="3-5">
+                                <input name="timemanagement" class="filter-input" type="checkbox" value="3-5">
                                 3-5 x per week
                             </label>
                         </div>
@@ -291,7 +292,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="minder">
+                                <input name="timemanagement" class="filter-input" type="checkbox" value="minder">
                                 Minder
                             </label>
                         </div>
@@ -299,7 +300,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="meer">
+                                <input name="timemanagement" class="filter-input" type="checkbox" value="meer">
                                 Meer
                             </label>
                         </div>
@@ -316,7 +317,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="ja">
+                                <input name="missing" class="filter-input" type="checkbox" value="ja">
                                 Ja
                             </label>
                         </div>
@@ -324,7 +325,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="nee">
+                                <input name="missing" class="filter-input" type="checkbox" value="nee">
                                 Nee
                             </label>
                         </div>
@@ -332,7 +333,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="nvt">
+                                <input name="missing" class="filter-input" type="checkbox" value="nvt">
                                 N.v.t
                             </label>
                         </div>
@@ -366,7 +367,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="Rock">
+                                <input name="genre" class="filter-input" type="checkbox" value="Rock">
                                 Rock
                             </label>
                         </div>
@@ -374,7 +375,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="Pop">
+                                <input name="genre" class="filter-input" type="checkbox" value="Pop">
                                 Pop
                             </label>
                         </div>
@@ -382,7 +383,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Metal">
+                                <input name="genre" class="filter-input" type="checkbox" value="Metal">
                                 Metal
                             </label>
                         </div>
@@ -390,7 +391,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="Jazz">
+                                <input name="genre" class="filter-input" type="checkbox" value="Jazz">
                                 Jazz
                             </label>
                         </div>
@@ -410,7 +411,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Podiumnaam" aria-label="PodiumNaam" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button">Zoek</button>
+                        <button class="btn btn-outline-primary filter-input" type="button">Zoek</button>
                     </div>
                 </div>
             </div>
@@ -423,20 +424,20 @@
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse in" >
-                <select class="custom-select">
+                <select name="location" class="filter-input custom-select">
                     <option selected>Selecteer de provincie</option>
-                    <option value="1">Zuid-Holland</option>
-                    <option value="2">Noord-Holland</option>
-                    <option value="3">Noord-Brabant</option>
-                    <option value="4">Groningen</option>
-                    <option value="5">Gelderland</option>
-                    <option value="6">Flevoland</option>
-                    <option value="7">Zeeland</option>
-                    <option value="8">Overijssel</option>
-                    <option value="9">Limburg</option>
-                    <option value="10">Friesland</option>
-                    <option value="11">Drenthe</option>
-                    <option value="12">Utrecht</option>
+                    <option value="Zuid-Holland">Zuid-Holland</option>
+                    <option value="Noord-Holland">Noord-Holland</option>
+                    <option value="Noord-Brabant">Noord-Brabant</option>
+                    <option value="Groningen">Groningen</option>
+                    <option value="Gelderland">Gelderland</option>
+                    <option value="Flevoland">Flevoland</option>
+                    <option value="Zeeland">Zeeland</option>
+                    <option value="Overijssel">Overijssel</option>
+                    <option value="Limburg">Limburg</option>
+                    <option value="Friesland">Friesland</option>
+                    <option value="Drenthe">Drenthe</option>
+                    <option value="Utrecht">Utrecht</option>
                 </select>
             </div>
             <div class="panel-heading" >
@@ -449,7 +450,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="backline">
+                                <input name="equipment" class="filter-input" type="checkbox" value="backline">
                                 Backline
                             </label>
                         </div>
@@ -457,7 +458,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="instrumenten">
+                                <input name="equipment" class="filter-input" type="checkbox" value="instrumenten">
                                 Instrumenten
                             </label>
                         </div>
@@ -465,7 +466,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="lichten">
+                                <input name="equipment" class="filter-input" type="checkbox" value="lichten">
                                 Lichten
                             </label>
                         </div>
@@ -473,15 +474,7 @@
                     <li class="list-group-item">
                         <div class="checkbox"  >
                             <label>
-                                <input type="checkbox" value="meer">
-                                Meer
-                            </label>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="checkbox"  >
-                            <label>
-                                <input type="checkbox" value="meer">
+                                <input name="equipment" class="filter-input" type="checkbox" value="meer">
                                 Meer
                             </label>
                         </div>
@@ -498,7 +491,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="ja">
+                                <input name="gage" class="filter-input" type="checkbox" value="ja">
                                 Ja
                             </label>
                         </div>
@@ -506,7 +499,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="nee">
+                                <input name="gage" class="filter-input" type="checkbox" value="nee">
                                 Nee
                             </label>
                         </div>
@@ -514,7 +507,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="nvt">
+                                <input name="gage" class="filter-input" type="checkbox" value="nvt">
                                 N.v.t
                             </label>
                         </div>
@@ -531,7 +524,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="ja">
+                                <input name="contract" class="filter-input" type="checkbox" value="ja">
                                 Ja
                             </label>
                         </div>
@@ -539,7 +532,7 @@
                     <li class="list-group-item">
                         <div class="checkbox" >
                             <label>
-                                <input type="checkbox" value="nee">
+                                <input name="contract" class="filter-input" type="checkbox" value="nee">
                                 Nee
                             </label>
                         </div>
@@ -547,7 +540,7 @@
                     <li class="list-group-item">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="nvt">
+                                <input name="contract" class="filter-input" type="checkbox" value="nvt">
                                 N.v.t
                             </label>
                         </div>
@@ -560,3 +553,4 @@
         </div>
     </div>
 @endif
+</form>

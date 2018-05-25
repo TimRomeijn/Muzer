@@ -29,4 +29,19 @@ class AdvancedSearchController extends Controller
 
         return view('advancedsearch.stagesearch', compact('stageprofiles'));
     }
+
+    public function getFilterData(Request $request) {
+
+
+
+        $musiciansearches = MusicianProfile::all();
+        $bandsearches = BandProfile::all();
+        $stagesearches = StageProfile::all();
+
+        $filterResults = array_collapse([$musiciansearches, $bandsearches, $stagesearches]);
+
+        dd($musiciansearches->where('location','=',$request->location));
+
+//        return redirect($request->server('HTTP_REFERER'));
+    }
 }

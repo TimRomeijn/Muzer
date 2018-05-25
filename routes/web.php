@@ -28,6 +28,8 @@ Route::get('/advancedsearch/bandsearch', 'AdvancedSearchController@bandsearch');
 
 Route::get('/advancedsearch/stagesearch', 'AdvancedSearchController@stagesearch');
 
+Route::get('/advancedsearch/filter', 'AdvancedSearchController@getFilterData');
+
 
 
 // Profiles Routing

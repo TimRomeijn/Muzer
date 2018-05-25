@@ -8,6 +8,12 @@
 
     <div class="right-container col-sm-4 float-sm-right">
 
+        <div class="add-bandmember-button">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addmemberModal">
+               Stuur koppelverzoek
+            </button>
+        </div>
+
         <div class="card profile-progression">
             <div class="card-header text-center">
                 Profielprogressie
@@ -34,6 +40,8 @@
                 </div>
             </div>
         </div>
+
+        @include('partials.modals.bandmemberaddmodal')
 
     </div>
 

@@ -1,3 +1,5 @@
+
+//Filter animations
 $('.filter-button').click(function() {
     $('.filter-container').removeClass('d-none');
 });
@@ -9,4 +11,15 @@ $('.indicator').on('click', function () {
     $(this)
         .toggleClass('fa-caret-down')
         .toggleClass('fa-caret-right');
+});
+
+//Filter calls to get right data from database
+
+function randomNaam() {
+
+}
+
+$('.filter-input').change(function () {
+
+    $('#filter-form').submit();
 });

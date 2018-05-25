@@ -81,7 +81,7 @@ class ProfilesController extends Controller
         }
 
         $musicianprofiles = MusicianProfile::all()->where('band_id', '=',  $profile->id);
-        $stageprofiles = StageProfile::all();
+        $stageprofiles = StageProfile::all()->where('user_id', '=' , Auth::id() );
         $type = '2';
 
         return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles','newData', 'type'));
@@ -99,9 +99,10 @@ class ProfilesController extends Controller
             $newData[$data['tab_id']] = $data['text'];
         }
 
+        $bandprofiles = BandProfile::all()->where('user_id', '=' , Auth::id() );
         $type = '3';
 
-        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData', 'type'));
+        return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData', 'type' ,'bandprofiles'));
     }
 
     public function store(request $request) {
