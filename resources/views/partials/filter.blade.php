@@ -1,8 +1,8 @@
 <form name="filter-form" id="filter-form" method="GET" action="/advancedsearch/filter">
 @if($isMusician)
     <div id="accordion" class="panel panel-primary behclick-panel">
+        <input type="hidden" name="type" value="musician">
         <div class="panel-heading">
-            <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             <div class="close-filter-button">
                 <i class="fas fa-times-circle fa-lg"></i>
             </div>
@@ -158,16 +158,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="panel-heading">
-                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
-            </div>
         </div>
     </div>
 @endif
 @if($isBand)
     <div id="accordion" class="panel panel-primary behclick-panel">
+        <input type="hidden" name="type" value="band">
         <div class="panel-heading">
-            <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             <div class="close-filter-button">
                 <i class="fas fa-times-circle fa-lg"></i>
             </div>
@@ -243,7 +240,7 @@
             </div>
             <div id="collapse2" class="panel-collapse collapse in" >
                 <select name="location" class="filter-input custom-select">
-                    <option selected>Selecteer de provincie</option>
+                    <option value="">Selecteer de provincie</option>
                     <option value="Zuid-Holland">Zuid-Holland</option>
                     <option value="Noord-Holland">Noord-Holland</option>
                     <option value="Noord-Brabant">Noord-Brabant</option>
@@ -340,16 +337,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="panel-heading">
-                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
-            </div>
         </div>
     </div>
 @endif
 @if($isStage)
     <div id="accordion" class="panel panel-primary behclick-panel">
+        <input type="hidden" name="type" value="stage">
         <div class="panel-heading">
-            <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             <div class="close-filter-button">
                 <i class="fas fa-times-circle fa-lg"></i>
             </div>
@@ -425,7 +419,7 @@
             </div>
             <div id="collapse2" class="panel-collapse collapse in" >
                 <select name="location" class="filter-input custom-select">
-                    <option selected>Selecteer de provincie</option>
+                    <option value="">Selecteer de provincie</option>
                     <option value="Zuid-Holland">Zuid-Holland</option>
                     <option value="Noord-Holland">Noord-Holland</option>
                     <option value="Noord-Brabant">Noord-Brabant</option>
@@ -546,9 +540,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-            <div class="panel-heading">
-                <button type="button" class="btn btn-primary btn-lg search-button">Zoek</button>
             </div>
         </div>
     </div>

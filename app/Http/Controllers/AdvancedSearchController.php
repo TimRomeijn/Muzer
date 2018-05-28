@@ -9,70 +9,85 @@ use Illuminate\Http\Request;
 
 class AdvancedSearchController extends Controller
 {
-    public function index(){
+    private $results = [];
 
-        $musicianprofiles = MusicianProfile::all();
+    public function index(Request $request)
+    {
 
-        return view('advancedsearch.musiciansearch' , compact('musicianprofiles'));
+        $musiciansearches = MusicianProfile::all();
+
+        $results = [$musiciansearches, [], []];
+
+        return view('advancedsearch.musiciansearch' , compact('results'));
     }
 
-    public function bandsearch(){
+    public function bandsearch(Request $request){
 
         $bandprofiles = BandProfile::all();
 
-        return view('advancedsearch.bandsearch', compact('bandprofiles'));
+        $results = [[], $bandprofiles, []];
+
+        return view('advancedsearch.bandsearch', compact('bandprofiles', 'results'));
     }
 
     public function stagesearch(){
 
         $stageprofiles = StageProfile::all();
 
-        return view('advancedsearch.stagesearch', compact('stageprofiles'));
+        $results = [[], [], $stageprofiles];
+
+        return view('advancedsearch.stagesearch', compact('stageprofiles', 'results'));
     }
 
     public function getFilterData(Request $request) {
-
-        $musiciansearches = MusicianProfile::all();
-        $bandsearches = BandProfile::all();
-        $stagesearches = StageProfile::all();
-
-//        $results = [$musiciansearches, $bandsearches, $stagesearches];
-
-        $mfilters = ['genre', 'location', 'instruments', 'typemusician'];
-        foreach($mfilters as $filter) {
-            if ($request->has($filter)) {
-                if (!is_null($request->{$filter})){
-                    dd($musiciansearches = $musiciansearches->where($filter, '=' ,$request->{$filter}));
-                }else {
-                    dd('Ja hallo faalhaasje');
-                }
-            }
+        if (!isset($_GET['type'])){
+            return 'error';
         }
-        $bfilters = ['genre', 'location'];
-        foreach($bfilters as $filter) {
-            if ($request->has($filter)) {
-                if (!is_null($request->{$filter})) {
-                    dd($bandsearches = $bandsearches->where($filter, '=' ,$request->{$filter}));
-                }else {
-                    dd('Ja hallo faalhaasje');
-                }
-            }
-        }
-        $sfilters = ['genre', 'location'];
-        foreach($sfilters as $filter) {
-            if ($request->has($filter)) {
-                if (!is_null($request->{$filter})) {
-                    dd($stagesearches = $stagesearches->where($filter, '=' ,$request->{$filter}));
-                }else {
-                    dd('Ja hallo faalhaasje');
+        $type = $_GET['type'];
+
+        $musiciansearches = [];
+        $bandsearches = [];
+        $stagesearches = [];
+
+        if ($type == 'musician') {
+            $musiciansearches = MusicianProfile::all();
+            $mfilters = ['genre', 'location', 'instruments', 'typemusician'];
+            foreach ($mfilters as $filter) {
+                if ($request->has($filter)) {
+                    if (!is_null($request->{$filter})) {
+                        $musiciansearches = $musiciansearches->where($filter, '=', $request->{$filter});
+                    }
                 }
             }
         }
 
+        if ($type == 'band') {
+            $bandsearches = BandProfile::all();
+            $bfilters = ['genre', 'location', 'timemanagement', 'missing'];
+            foreach ($bfilters as $filter) {
+                if ($request->has($filter)) {
+                    if (!is_null($request->{$filter})) {
+                        $bandsearches = $bandsearches->where($filter, '=', $request->{$filter});
+                    }
+                }
+            }
+        }
+        if ($type == 'stage') {
+            $stagesearches = StageProfile::all();
+            $sfilters = ['genre', 'location', 'equipment', 'gage', 'contract'];
+            foreach ($sfilters as $filter) {
+                if ($request->has($filter)) {
+                    if (!is_null($request->{$filter})) {
+                        $stagesearches = $stagesearches->where($filter, '=', $request->{$filter});
+                    }
+                }
+            }
+        }
 
+        $results = [$musiciansearches, $bandsearches, $stagesearches];
 
-//        dd($bandsearches->where('genre','=',$request->genre));
+//        dd($results);
 
-//        return redirect($request->server('HTTP_REFERER'));
+        return view('advancedsearch.'.$type.'search', compact('results'));
     }
 }

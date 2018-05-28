@@ -13,62 +13,68 @@
     </ul>
 
             @if($isMusician)
-                @foreach($musicianprofiles as $result)
-                    <div class="card-group">
-                        <div class="card col-md-4 d-none d-sm-block">
-                            <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
-                        </div>
-                        <div class="card col-sm-8">
-                            <div class="card-header">
-                                Muzikant
+                @foreach($results as $result)
+                    @foreach($result as $data)
+                        <div class="card-group">
+                            <div class="card col-md-4 d-none d-sm-block">
+                                <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $result->name }}</h5>
-                                <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/musicianprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
+                            <div class="card col-sm-8">
+                                <div class="card-header">
+                                    Muzikant
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $data->name }}</h5>
+                                    <p class="card-text">{{ $data->location }}</p>
+                                    <a href="/profiles/musicianprofile/{{ $data->id }}" class="btn btn-primary">Bekijk</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 @endforeach
             @endif
 
             @if($isBand)
-                @foreach($bandprofiles as $result)
-                    <div class="card-group">
-                        <div class="card col-md-4 d-none d-sm-block">
-                            <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
+                @foreach($results as $result)
+            @foreach($result as $data)
+                <div class="card-group">
+                    <div class="card col-md-4 d-none d-sm-block">
+                        <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
+                    </div>
+                    <div class="card col-sm-8">
+                        <div class="card-header">
+                            Muzikant
                         </div>
-                        <div class="card col-sm-8">
-                            <div class="card-header">
-                                Band
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $result->name }}</h5>
-                                <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/bandprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
-                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $data->name }}</h5>
+                            <p class="card-text">{{ $data->location }}</p>
+                            <a href="/profiles/bandprofile/{{ $data->id }}" class="btn btn-primary">Bekijk</a>
                         </div>
                     </div>
+                </div>
+            @endforeach
                 @endforeach
             @endif
 
             @if($isStage)
-                @foreach($stageprofiles as $result)
-                    <div class="card-group">
-                        <div class="card col-md-4 d-none d-sm-block">
-                            <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
+                @foreach($results as $result)
+            @foreach($result as $data)
+                <div class="card-group">
+                    <div class="card col-md-4 d-none d-sm-block">
+                        <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
+                    </div>
+                    <div class="card col-sm-8">
+                        <div class="card-header">
+                            Muzikant
                         </div>
-                        <div class="card col-sm-8">
-                            <div class="card-header">
-                                Podium
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $result->name }}</h5>
-                                <p class="card-text">{{ $result->location }}</p>
-                                <a href="/profiles/stageprofile/{{ $result->id }}" class="btn btn-primary">Bekijk</a>
-                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $data->name }}</h5>
+                            <p class="card-text">{{ $data->location }}</p>
+                            <a href="/profiles/stageprofile/{{ $data->id }}" class="btn btn-primary">Bekijk</a>
                         </div>
                     </div>
+                </div>
+            @endforeach
                 @endforeach
             @endif
 
