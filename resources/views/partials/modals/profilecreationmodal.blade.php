@@ -43,6 +43,17 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Genre</label>
+                        <select name="genre" class="custom-select form-control">
+                            <option selected>Selecteer het primaire genre</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Metal">Metal</option>
+                            <option value="Jazz">Jazz</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleFormControlTextarea1">Locatie</label>
                         <select name="location" class="custom-select form-control">
                             <option selected>Selecteer de provincie</option>

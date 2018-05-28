@@ -32,15 +32,46 @@ class AdvancedSearchController extends Controller
 
     public function getFilterData(Request $request) {
 
-
-
         $musiciansearches = MusicianProfile::all();
         $bandsearches = BandProfile::all();
         $stagesearches = StageProfile::all();
 
-        $filterResults = array_collapse([$musiciansearches, $bandsearches, $stagesearches]);
+//        $results = [$musiciansearches, $bandsearches, $stagesearches];
 
-        dd($musiciansearches->where('location','=',$request->location));
+        $mfilters = ['genre', 'location', 'instruments', 'typemusician'];
+        foreach($mfilters as $filter) {
+            if ($request->has($filter)) {
+                if (!is_null($request->{$filter})){
+                    dd($musiciansearches = $musiciansearches->where($filter, '=' ,$request->{$filter}));
+                }else {
+                    dd('Ja hallo faalhaasje');
+                }
+            }
+        }
+        $bfilters = ['genre', 'location'];
+        foreach($bfilters as $filter) {
+            if ($request->has($filter)) {
+                if (!is_null($request->{$filter})) {
+                    dd($bandsearches = $bandsearches->where($filter, '=' ,$request->{$filter}));
+                }else {
+                    dd('Ja hallo faalhaasje');
+                }
+            }
+        }
+        $sfilters = ['genre', 'location'];
+        foreach($sfilters as $filter) {
+            if ($request->has($filter)) {
+                if (!is_null($request->{$filter})) {
+                    dd($stagesearches = $stagesearches->where($filter, '=' ,$request->{$filter}));
+                }else {
+                    dd('Ja hallo faalhaasje');
+                }
+            }
+        }
+
+
+
+//        dd($bandsearches->where('genre','=',$request->genre));
 
 //        return redirect($request->server('HTTP_REFERER'));
     }

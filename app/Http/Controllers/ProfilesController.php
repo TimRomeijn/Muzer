@@ -133,6 +133,7 @@ class ProfilesController extends Controller
         $profile->name = $request->name;
         $profile->email = $request->email;
         $profile->phonenumber = $request->phonenumber;
+        $profile->genre = $request->genre;
         $profile->location = $request->location;
         $profile->save([$profile]);
 
