@@ -10,7 +10,6 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Zoek</button>
         </form>
 
-
         <div class="right-nav-items ml-auto">
             <div class="advanced-search-nav-button ">
                 <a href="/advancedsearch">

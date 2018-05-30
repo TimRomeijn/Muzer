@@ -56,14 +56,26 @@ $('.indicator').on('click', function () {
 
 //Filter calls to get right data from database
 
-function randomNaam() {
-
-}
-
 $('.filter-input').change(function () {
 
     $('#filter-form').submit();
+    event.preventDefault();
 });
+// //Keep filters checked
+// $('.checkBox').click(function(e){
+//     // if (e.target.checked) {
+//     //     localStorage.checked = true;
+//     // } else {
+//     //     localStorage.checked = false;
+//     // }
+//     return e.target.checked
+// });
+//
+// $( document ).ready(function() {
+//
+//     document.querySelector('.checkBox').checked = localStorage.checked
+//
+// });
 
 $('#bookSubmit').click(function () {
     alert('U heeft een verzoek tot boeking gemaakt tussen band en podium voor een optreden. ')

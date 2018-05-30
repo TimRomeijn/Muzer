@@ -18,7 +18,7 @@ class AdvancedSearchController extends Controller
 
         $results = [$musiciansearches, [], []];
 
-        return view('advancedsearch.musiciansearch' , compact('results'));
+        return view('advancedsearch.musiciansearch' , compact('results' ));
     }
 
     public function bandsearch(Request $request){
@@ -55,7 +55,7 @@ class AdvancedSearchController extends Controller
             foreach ($mfilters as $filter) {
                 if ($request->has($filter)) {
                     if (!is_null($request->{$filter})) {
-                        $musiciansearches = $musiciansearches->where($filter, '=', $request->{$filter});
+                        $musiciansearches = $musiciansearches->whereIn($filter, $request->{$filter});
                     }
                 }
             }
@@ -67,7 +67,7 @@ class AdvancedSearchController extends Controller
             foreach ($bfilters as $filter) {
                 if ($request->has($filter)) {
                     if (!is_null($request->{$filter})) {
-                        $bandsearches = $bandsearches->where($filter, '=', $request->{$filter});
+                        $bandsearches = $bandsearches->whereIn($filter, $request->{$filter});
                     }
                 }
             }
@@ -78,15 +78,14 @@ class AdvancedSearchController extends Controller
             foreach ($sfilters as $filter) {
                 if ($request->has($filter)) {
                     if (!is_null($request->{$filter})) {
-                        $stagesearches = $stagesearches->where($filter, '=', $request->{$filter});
+                        $stagesearches = $stagesearches->whereIn($filter, $request->{$filter});
                     }
                 }
             }
         }
 
-        $results = [$musiciansearches, $bandsearches, $stagesearches];
 
-//        dd($results);
+        $results = [$musiciansearches, $bandsearches, $stagesearches];
 
         return view('advancedsearch.'.$type.'search', compact('results'));
     }
