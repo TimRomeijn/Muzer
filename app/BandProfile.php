@@ -12,4 +12,9 @@ class BandProfile extends Model
 
         return $this->hasMany(MusicianProfile::class);
     }
+
+    public function scopeSearch($query, $search) {
+
+        return $query->where('name', 'like', '%' .$search. '%');
+    }
 }

@@ -61,24 +61,24 @@
 
             @if($isStage)
                 @foreach($results as $result)
-            @foreach($result as $data)
-                <div class="card-group">
-                    <div class="card col-md-4 d-none d-sm-block">
-                        <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
-                    </div>
-                    <div class="card col-sm-8">
-                        <div class="card-header">
-                            Podium
+                    @foreach($result as $data)
+                        <div class="card-group">
+                            <div class="card col-md-4 d-none d-sm-block">
+                                <img src="https://picsum.photos/500/?random" alt="profile-picture" class="card-img result-profile-pic">
+                            </div>
+                            <div class="card col-sm-8">
+                                <div class="card-header">
+                                    Podium
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $data->name }}</h5>
+                                    <p class="card-text">Locatie:{{ $data->location }}</p>
+                                    <p class="card-text">Genre:{{ $data->genre }}</p>
+                                    <a href="/profiles/stageprofile/{{ $data->id }}" class="btn btn-primary">Bekijk</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $data->name }}</h5>
-                            <p class="card-text">Locatie:{{ $data->location }}</p>
-                            <p class="card-text">Genre:{{ $data->genre }}</p>
-                            <a href="/profiles/stageprofile/{{ $data->id }}" class="btn btn-primary">Bekijk</a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+                    @endforeach
                 @endforeach
             @endif
 

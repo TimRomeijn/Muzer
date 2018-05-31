@@ -64,10 +64,18 @@ class AdvancedSearchController extends Controller
         if ($type == 'band') {
             $bandsearches = BandProfile::all();
             $bfilters = ['genre', 'location', 'timemanagement', 'missing'];
+            $searchBandName = $request->input('bandnaam');
+            $bandsearchfilter = "bandnaam";
             foreach ($bfilters as $filter) {
                 if ($request->has($filter)) {
                     if (!is_null($request->{$filter})) {
                         $bandsearches = $bandsearches->whereIn($filter, $request->{$filter});
+
+                    } elseif (!is_null($request->{$bandsearchfilter})){
+                        $bandsearches = collect($bandsearches)->filter(function ($item) use ($searchBandName) {
+
+                            return stripos($item->name, $searchBandName) !== false;
+                        });
                     }
                 }
             }
@@ -75,10 +83,18 @@ class AdvancedSearchController extends Controller
         if ($type == 'stage') {
             $stagesearches = StageProfile::all();
             $sfilters = ['genre', 'location', 'equipment', 'gage', 'contract'];
+            $searchStageName = $request->input('podiumnaam');
+            $stagesearchfilter = "podiumnaam";
             foreach ($sfilters as $filter) {
                 if ($request->has($filter)) {
                     if (!is_null($request->{$filter})) {
                         $stagesearches = $stagesearches->whereIn($filter, $request->{$filter});
+
+                    }elseif (!is_null($request->{$stagesearchfilter})){
+                        $stagesearches = collect($stagesearches)->filter(function ($item) use ($searchStageName) {
+
+                            return stripos($item->name, $searchStageName) !== false;
+                        });
                     }
                 }
             }
@@ -86,6 +102,8 @@ class AdvancedSearchController extends Controller
 
 
         $results = [$musiciansearches, $bandsearches, $stagesearches];
+
+//        dd($results);
 
         return view('advancedsearch.'.$type.'search', compact('results'));
     }

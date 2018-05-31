@@ -23,6 +23,13 @@
     $instrumentsIsChecked = false;
     $lightsIsChecked = false;
     $moreEquipmentIsChecked = false;
+    $yesGageIsChecked = false;
+    $noGageIsChecked = false;
+    $nvtGageIsChecked = false;
+    $yesContractIsChecked = false;
+    $noContractIsChecked = false;
+    $nvtContractIsChecked = false;
+
 
 
 
@@ -102,6 +109,28 @@
                     $lightsIsChecked = true;
                 } else if ($val == 'meer'){
                     $moreEquipmentIsChecked = true;
+                }
+            }
+        }
+        if(isset($_GET['gage'])){
+            foreach ($_GET['gage'] as $val){
+                if ($val == 'ja'){
+                    $yesGageIsChecked = true;
+                }else if ($val == 'nee'){
+                    $noGageIsChecked = true;
+                }else if ($val == 'nvt'){
+                    $nvtGageIsChecked = true;
+                }
+            }
+        }
+        if(isset($_GET['contract'])){
+            foreach ($_GET['contract'] as $val){
+                if ($val == 'ja'){
+                    $yesContractIsChecked = true;
+                }else if ($val == 'nee'){
+                    $noContractIsChecked = true;
+                }else if ($val == 'nvt'){
+                    $nvtContractIsChecked = true;
                 }
             }
         }
@@ -334,9 +363,9 @@
 
             <div id="collapse1" class="panel-collapse collapse in">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Bandnaam" aria-label="BandNaam" aria-describedby="basic-addon2">
+                    <input  name="bandnaam" type="text" class="form-control" placeholder="Bandnaam" aria-label="BandNaam" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary filter-input" type="button">Zoek</button>
+                        <button class="btn btn-outline-primary filter-input" type="submit">Zoek</button>
                     </div>
                 </div>
             </div>
@@ -514,9 +543,9 @@
 
         <div id="collapse1" class="panel-collapse collapse in">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Podiumnaam" aria-label="PodiumNaam" aria-describedby="basic-addon2">
+                <input type="text" name="podiumnaam" class="form-control filter-input" placeholder="Podiumnaam" aria-label="PodiumNaam" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-primary filter-input" type="button">Zoek</button>
+                    <button class="btn btn-outline-primary filter-input" type="submit">Zoek</button>
                 </div>
             </div>
         </div>
@@ -596,7 +625,7 @@
                 <li class="list-group-item">
                     <div class="checkbox">
                         <label>
-                            <input name="gage" class="filter-input" type="checkbox" value="ja">
+                            <input name="gage[]" class="filter-input" type="checkbox" value="ja" @php if($yesGageIsChecked)echo "checked='checked'";  @endphp>
                             Ja
                         </label>
                     </div>
@@ -604,7 +633,7 @@
                 <li class="list-group-item">
                     <div class="checkbox" >
                         <label>
-                            <input name="gage" class="filter-input" type="checkbox" value="nee">
+                            <input name="gage[]" class="filter-input" type="checkbox" value="nee" @php if($noGageIsChecked)echo "checked='checked'";  @endphp>
                             Nee
                         </label>
                     </div>
@@ -612,7 +641,7 @@
                 <li class="list-group-item">
                     <div class="checkbox">
                         <label>
-                            <input name="gage" class="filter-input" type="checkbox" value="nvt">
+                            <input name="gage[]" class="filter-input" type="checkbox" value="nvt" @php if($nvtGageIsChecked)echo "checked='checked'";  @endphp>
                             N.v.t
                         </label>
                     </div>
@@ -629,7 +658,7 @@
                 <li class="list-group-item">
                     <div class="checkbox">
                         <label>
-                            <input name="contract" class="filter-input" type="checkbox" value="ja">
+                            <input name="contract[]" class="filter-input" type="checkbox" value="ja" @php if($yesContractIsChecked)echo "checked='checked'";  @endphp>
                             Ja
                         </label>
                     </div>
@@ -637,7 +666,7 @@
                 <li class="list-group-item">
                     <div class="checkbox" >
                         <label>
-                            <input name="contract" class="filter-input" type="checkbox" value="nee">
+                            <input name="contract[]" class="filter-input" type="checkbox" value="nee" @php if($noContractIsChecked)echo "checked='checked'";  @endphp>
                             Nee
                         </label>
                     </div>
@@ -645,7 +674,7 @@
                 <li class="list-group-item">
                     <div class="checkbox">
                         <label>
-                            <input name="contract" class="filter-input" type="checkbox" value="nvt">
+                            <input name="contract[]" class="filter-input" type="checkbox" value="nvt" @php if($nvtContractIsChecked)echo "checked='checked'";  @endphp>
                             N.v.t
                         </label>
                     </div>
