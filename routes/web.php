@@ -53,6 +53,11 @@ Route::post('/profiles/editcontent', 'BlocksController@update');
 //Route::get('/profiles/editcontent', 'BlocksController@update');
 
 
+//Mail routing
+
+Route::post('/mail/sendmail', 'MailController@sendMail');
+
+
 
 // Chat Routing
 

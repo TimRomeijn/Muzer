@@ -27,7 +27,7 @@ class AdvancedSearchController extends Controller
 
         $results = [[], $bandprofiles, []];
 
-        return view('advancedsearch.bandsearch', compact('bandprofiles', 'results'));
+        return view('advancedsearch.bandsearch', compact( 'results'));
     }
 
     public function stagesearch(){
@@ -36,7 +36,7 @@ class AdvancedSearchController extends Controller
 
         $results = [[], [], $stageprofiles];
 
-        return view('advancedsearch.stagesearch', compact('stageprofiles', 'results'));
+        return view('advancedsearch.stagesearch', compact( 'results'));
     }
 
     public function getFilterData(Request $request) {
@@ -102,8 +102,6 @@ class AdvancedSearchController extends Controller
 
 
         $results = [$musiciansearches, $bandsearches, $stagesearches];
-
-//        dd($results);
 
         return view('advancedsearch.'.$type.'search', compact('results'));
     }

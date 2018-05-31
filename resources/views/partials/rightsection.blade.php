@@ -19,6 +19,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 @foreach($profileAccounts as $pfa)
+                    {{--/profiles/@if (isset($pfa->typemusician)) musicianprofile @elseif(isset($pfa->missing))bandprofile @elseif(isset($pfa->gage))stageprofile @endif /{{ $pfa->id }}--}}
                     <a class="dropdown-item" href="#">{{ $pfa->name }}</a>
                 @endforeach
             </div>

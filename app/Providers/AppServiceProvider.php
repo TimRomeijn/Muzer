@@ -35,17 +35,13 @@ class AppServiceProvider extends ServiceProvider
             $view->with('profileAccounts', $profileAccounts);
         });
 
-        view()->composer('*', function ($view)
-        {
-//            $currentMAccount = 'musicianprofile';
-//            $currentBAccount = 'bandprofile';
-//            $currentSAccount = 'stageprofile';
-//            $currentAccounts = [$currentMAccount, $currentBAccount, $currentSAccount ];
-//            dd($currentAccounts);
+//        view()->composer('*', function ($view2)
+//        {
+//              $currentAccounts = [1=> 'musicianprofile', 2=> 'bandprofile', 3=> 'stageprofile'];
 //
 //            //...with this variable
-//            $view->with('currentAccounts', $currentAccounts);
-        });
+//            $view2->with('currentAccounts', $currentAccounts);
+//        });
     }
 
     /**
