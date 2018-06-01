@@ -1,4 +1,7 @@
-<form method="post" action="/mail/sendmail">
+<form method="POST" action="/mail/sendmail">
+
+    {{ csrf_field() }}
+
     <div class="modal fade" id="bandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -42,7 +45,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
-                    <button type="submit" id="bookSubmit" class="btn btn-primary" data-dismiss="modal">Stuur verzoek</button>
+                    <button type="submit" id="bookSubmit" class="btn btn-primary">Stuur verzoek</button>
                 </div>
             </div>
         </div>

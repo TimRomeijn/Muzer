@@ -28,6 +28,6 @@ class StageBooked extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('tim@romeijn.nu')->view('mails.stagebooked');
     }
 }

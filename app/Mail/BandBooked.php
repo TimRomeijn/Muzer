@@ -28,7 +28,6 @@ class BandBooked extends Mailable
      */
     public function build()
     {
-        return $this->from('tim@romeijn.nu')->
-                        view('mails.bandbooked');
+        return $this->from('tim@romeijn.nu')->view('mails.bandbooked');
     }
 }

@@ -3,11 +3,12 @@
 @section('content')
 
     <div class="email-container">
-        <h1>Hallo gebruikertjeee</h1>
+        <h1>Hallo Band</h1>
 
-        <span>Dit is een tekst Dit is een tekstDit is een tekstDit is een tekstDit is een tekstDit is een tekstDit is een tekstDit is een tekstDit is een tekst</span>
+        <span>Ik wil je graag boeken enzo</span>
 
         <footer>Doei doei</footer>
+
 
 
     </div>

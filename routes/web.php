@@ -10,11 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Mail\BandBooked;
+use Illuminate\Support\Facades\Mail;
 
 
 //General Routing
 
 Route::get('/', function () {
+
+    $bandbookedmail = new BandBooked();
+
+    Mail::to('tim28@live.nl')->send($bandbookedmail);
     return view('home');
 });
 
@@ -55,7 +61,7 @@ Route::post('/profiles/editcontent', 'BlocksController@update');
 
 //Mail routing
 
-Route::post('/mail/sendmail', 'MailController@sendMail');
+Route::post('/mail/sendmail', 'MailsController@sendmail');
 
 
 
