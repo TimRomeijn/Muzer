@@ -5,10 +5,9 @@
     <div class="email-container">
         <h1>Hallo Podium</h1>
 
-        <span>Ik wil je graag boeken enzo</span>
+        <span>{{ $mailcontent }}</span>
 
-        <footer>Doei doei</footer>
-
+        <footer>Email verzonden met Muzer</footer>
 
     </div>
 

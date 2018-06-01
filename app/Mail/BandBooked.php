@@ -2,6 +2,8 @@
 
 namespace App\Mail;
 
+use App\BandProfile;
+use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -16,9 +18,21 @@ class BandBooked extends Mailable
      *
      * @return void
      */
-    public function __construct()
+
+
+    public $profile;
+
+    public $contract;
+
+    public $mailcontent;
+
+    public $mailadress;
+
+    public function __construct(Request $request)
     {
-        //
+        $this->profile = $request->get('profile');
+        $this->mailadress = $request->get('email');
+        $this->mailcontent = $request->get('bookingbandreason');
     }
 
     /**
@@ -26,8 +40,14 @@ class BandBooked extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build(Request $request)
     {
-        return $this->from('tim@romeijn.nu')->view('mails.bandbooked');
+        return $this->from('tim@romeijn.nu')
+            ->view('mails.bandbooked')
+            ->attach($request->files->get('contract')->getRealPath(),[
+                'as' => $request->files->get('contract')->getClientOriginalName(),
+                'mime' => $request->files->get('contract')->getMimeType(),
+
+        ]);
     }
 }

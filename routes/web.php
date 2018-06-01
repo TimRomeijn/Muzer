@@ -18,9 +18,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
 
-    $bandbookedmail = new BandBooked();
-
-    Mail::to('tim28@live.nl')->send($bandbookedmail);
     return view('home');
 });
 
@@ -61,7 +58,9 @@ Route::post('/profiles/editcontent', 'BlocksController@update');
 
 //Mail routing
 
-Route::post('/mail/sendmail', 'MailsController@sendmail');
+Route::post('/mail/sendmailtoband', 'MailsController@sendmailtoband');
+
+Route::post('/mail/sendmailtostage', 'MailsController@sendmailtostage');
 
 
 
