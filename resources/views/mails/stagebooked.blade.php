@@ -13,7 +13,7 @@
 
         <div class="salutation">
 
-            <h1>Beste poppodium {{ $profile}}</h1>
+            <h1>Beste poppodium {{ $name}}</h1>
         </div>
 
         <div class="introduction">

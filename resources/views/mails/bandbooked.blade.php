@@ -12,7 +12,7 @@
     <div class="email-container">
 
         <div class="salutation">
-            <h1>Beste band {{ $profile}}</h1>
+            <h1>Beste band {{ $name }},</h1>
         </div>
 
         <div class="reason">

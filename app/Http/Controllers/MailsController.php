@@ -18,6 +18,7 @@ class MailsController extends Controller
 
         $profile = BandProfile::all()->where('id', '=',(basename($_SERVER['HTTP_REFERER'])))->first()->email;
 
+
         Mail::to($profile)->send($bandbookedmail);
 
         return back();

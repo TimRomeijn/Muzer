@@ -23,6 +23,8 @@ class StageBooked extends Mailable
 
     public $contract;
 
+    public $name;
+
     public $profilepage;
 
     public $mailcontent;
@@ -33,12 +35,9 @@ class StageBooked extends Mailable
 
     public function __construct(Request $request)
     {
-//        if($request->has('contract')){
-//            $this->contract = $request->files->get('contract')->getRealPath();
-//        } else {
-//            dd('lege meuk');
-//        }
+
         $this->profile = $request->get('profile');
+        $this->name = StageProfile::all()->where('id', '=',(basename($_SERVER['HTTP_REFERER'])))->first()->name;
         $this->mailadress = $request->get('email');
         $this->mailcontent = $request->get('bookingstagereason');
         $this->phonenumber = $request->get('phonenumber');

@@ -22,6 +22,8 @@ class BandBooked extends Mailable
 
     public $profile;
 
+    public $name;
+
     public $contract;
 
     public $mailcontent;
@@ -30,7 +32,7 @@ class BandBooked extends Mailable
 
     public function __construct(Request $request)
     {
-
+        $this->name = BandProfile::all()->where('id', '=',(basename($_SERVER['HTTP_REFERER'])))->first()->name;
         $this->profile = $request->get('profile');
         $this->mailadress = $request->get('email');
         $this->mailcontent = $request->get('bookingbandreason');
