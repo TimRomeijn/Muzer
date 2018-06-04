@@ -87,7 +87,7 @@ class ProfilesController extends Controller
         return view('profiles.bandprofile',compact('tabs', 'blocks' ,'currentProfile' , 'profile', 'musicianprofiles', 'stageprofiles','newData', 'type'));
     }
 
-    public function stageprofile (StageProfile $profile, $tab = 'Overzicht') {
+    public function stageprofile (StageProfile $profile, $tab = 'Overzicht', Request $request) {
 
         $collection = $this->getTabsByProfile("stage");
         $tabs = array_keys($collection);
@@ -101,6 +101,8 @@ class ProfilesController extends Controller
 
         $bandprofiles = BandProfile::all()->where('user_id', '=' , Auth::id() );
         $type = '3';
+
+//        dd($request->route('profile')->name);
 
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData', 'type' ,'bandprofiles'));
     }

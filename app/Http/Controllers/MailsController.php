@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BandProfile;
 use App\Mail\BandBooked;
 use App\Mail\StageBooked;
 use Illuminate\Http\Request;

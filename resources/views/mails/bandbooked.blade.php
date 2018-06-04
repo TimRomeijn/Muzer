@@ -1,18 +1,35 @@
-@extends('layout')
-
-@section('content')
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testmailtje</title>
+</head>
+<body>
 
     <div class="email-container">
-        <h1>Hallo {{ $profile }}</h1>
 
+        <div class="salutation">
+            <h1>Beste band {{ $profile}}</h1>
+        </div>
 
+        <div class="reason">
+            <p>{{ $mailcontent }}</p>
+        </div>
 
-        <h3>Dit is een mailtje van {{ $mailadress }}</h3>
+        <div class="closing">
+            Met vriendelijke groet,
+            <br>
+            {{ $profile }}
+        </div>
 
-        <span>{{ $mailcontent }}</span>
-
-        <footer>Email verzonden met Muzer</footer>
+        <footer class="mail-footer">
+            <i>Email verzonden met Muzer</i>
+        </footer>
 
     </div>
 
-@endsection
+</body>
+</html>

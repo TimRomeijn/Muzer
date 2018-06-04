@@ -1,4 +1,4 @@
-<form action="/mail/sendmailtostage" method="post">
+<form action="/mail/sendmailtostage" method="post" enctype="multipart/form-data">
 
     {{ csrf_field() }}
 
@@ -29,8 +29,8 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer email in...">
-                            <small id="emailHelp" class="form-text text-muted">Zodat het podium u ook via de mail kan bereiken.</small>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer email in..." required>
+                            <small id="emailHelp" class="form-text text-muted">*VERPLICHT Zodat het podium u ook via de mail kan bereiken.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Contract uploaden</label>

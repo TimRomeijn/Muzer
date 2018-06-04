@@ -29,12 +29,12 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer email in" name="email">
-                            <small id="emailHelp" class="form-text text-muted">Zodat de band u ook via de mail kan bereiken.</small>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer email in" name="email" required>
+                            <small id="emailHelp" class="form-text text-muted">*VERPLICHT Zodat de band u ook via de mail kan bereiken.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Contract uploaden</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="contract">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="contract" placeholder="">
                             <small id="contractHelp" class="form-text text-muted">Indien beschikbaar</small>
                         </div>
                         <div class="form-group">

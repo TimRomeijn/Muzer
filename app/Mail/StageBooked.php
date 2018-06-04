@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\StageProfile;
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
@@ -18,11 +19,33 @@ class StageBooked extends Mailable
      * @return void
      */
 
+    public $profile;
+
+    public $contract;
+
+    public $profilepage;
+
     public $mailcontent;
+
+    public $mailadress;
+
+    public $phonenumber;
 
     public function __construct(Request $request)
     {
+//        if($request->has('contract')){
+//            $this->contract = $request->files->get('contract')->getRealPath();
+//        } else {
+//            dd('lege meuk');
+//        }
+        $this->profile = $request->get('profile');
+        $this->mailadress = $request->get('email');
         $this->mailcontent = $request->get('bookingstagereason');
+        $this->phonenumber = $request->get('phonenumber');
+
+
+        $this->profilepage = $request->route('profile');
+//        dd($this->profilepage);
     }
 
     /**
@@ -30,8 +53,18 @@ class StageBooked extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build(Request $request)
     {
-        return $this->from('tim@romeijn.nu')->view('mails.stagebooked');
+        if ($request->has('contract')) {
+            return $this->from($this->mailadress)
+                ->view('mails.stagebooked')
+                ->attach($this->contract = $request->files->get('contract')->getRealPath(), [
+                    'as' => $request->files->get('contract')->getClientOriginalName(),
+                    'mime' => $request->files->get('contract')->getMimeType(),
+                ]);
+        } else {
+            return $this->from($this->mailadress)
+                ->view('mails.stagebooked');
+        }
     }
 }

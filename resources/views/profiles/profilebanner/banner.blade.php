@@ -1,9 +1,3 @@
-{{--@php--}}
-    {{--$isMusician = isset($isMusician) ? $isMusician : false;--}}
-    {{--$isBand = isset($isBand) ? $isBand : false;--}}
-    {{--$isStage = isset($isStage) ? $isStage : false;--}}
-
-{{--@endphp--}}
 <div class="card-group">
     <div class="card hovercard col-md-8">
         <div class="card-background">
