@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\BandProfile;
 use App\Mail\BandBooked;
 use App\Mail\StageBooked;
+use App\StageProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,7 +16,9 @@ class MailsController extends Controller
 
         $bandbookedmail = new BandBooked($request);
 
-        Mail::to('tim28@live.nl')->send($bandbookedmail);
+        $profile = BandProfile::all()->where('id', '=',(basename($_SERVER['HTTP_REFERER'])))->first()->email;
+
+        Mail::to($profile)->send($bandbookedmail);
 
         return back();
     }
@@ -23,7 +26,9 @@ class MailsController extends Controller
 
         $stagebookedmail = new StageBooked($request);
 
-        Mail::to('tim28@live.nl')->send($stagebookedmail);
+        $profile = StageProfile::all()->where('id', '=',(basename($_SERVER['HTTP_REFERER'])))->first()->email;
+
+        Mail::to($profile)->send($stagebookedmail);
 
         return back();
     }

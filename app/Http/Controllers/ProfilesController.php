@@ -102,8 +102,6 @@ class ProfilesController extends Controller
         $bandprofiles = BandProfile::all()->where('user_id', '=' , Auth::id() );
         $type = '3';
 
-//        dd($request->route('profile')->name);
-
         return view('profiles.stageprofile',compact('tabs', 'blocks', 'currentProfile', 'profile', 'newData', 'type' ,'bandprofiles'));
     }
 
