@@ -60,19 +60,24 @@
                     </ul>
                 </div>
                 <div class="chat-messages-area">
-                    @for($i=0; $i < 5; $i++)
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Username</h5>
-                                <p class="card-text">Hallo dit is mijn chatbericht naar jou toe. Veel plezier ermee!</p>
-                            </div>
-                            <div class="card-footer text-muted">
-                                7-5-2018 - 13:59
-                            </div>
-                        </div>
-                    @endfor
+                    {{--@for($i=0; $i < 5; $i++)--}}
+                        {{--<div class="card">--}}
+                            {{--<div class="card-body">--}}
+                                {{--<h5 class="card-title">Username</h5>--}}
+                                {{--<p class="card-text">Hallo dit is mijn chatbericht naar jou toe. Veel plezier ermee!</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="card-footer text-muted">--}}
+                                {{--7-5-2018 - 13:59--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--@endfor--}}
+                        <chat-messages :messages="messages"></chat-messages>
                 </div>
                 <div class="chat-input-area">
+                    <chat-form
+                            v-on:messagesent="addMessage"
+                            :user="{{ Auth::user() }}"
+                    ></chat-form>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Typ hier om een bericht te versturen..." aria-describedby="basic-addon2">
                         <div class="input-group-append">

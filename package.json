@@ -22,6 +22,8 @@
     "dependencies": {
         "composer": "^3.0.1",
         "gem": "^2.4.3",
-        "npm": "^6.0.1"
+        "laravel-echo": "^1.4.0",
+        "npm": "^6.0.1",
+        "pusher-js": "^4.2.2"
     }
 }

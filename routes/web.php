@@ -68,6 +68,11 @@ Route::post('/mail/sendmailtostage', 'MailsController@sendmailtostage');
 
 Route::get('/chatsystem', 'ChatController@index');
 
+Route::get('messages', 'ChatController@fetchMessages');
+
+Route::post('messages', 'ChatController@sendMessage');
+
+
 // Authentication Routing
 Auth::routes();
 
