@@ -23,6 +23,10 @@
 
 $("a[href*='" + location.pathname + "']").addClass("current");
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
+
 // $('.right-chat-container').on('.open-chat', function () {
 //     $(this)
 //         .toggleClass('test-toggle');

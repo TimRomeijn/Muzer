@@ -8,9 +8,17 @@
 
         <div class="right-container col-sm-4 float-sm-right">
 
-            <div class="booking-button">
-                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#stageModal">Boekingsverzoek</button>
-            </div>
+            @auth
+                <div class="booking-button">
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#stageModal">Boekingsverzoek</button>
+                </div>
+            @endauth
+
+            @guest
+                <div class="booking-button">
+                    <button type="button" class="btn btn-primary btn-block"  data-toggle="tooltip" data-placement="top" title="Registreer en log in om een boeking te doen.">Boekingsverzoek</button>
+                </div>
+            @endguest
 
             <div class="card profile-progression">
                 <div class="card-header text-center">

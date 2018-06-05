@@ -22,3 +22,7 @@
 // });
 
 $("a[href*='" + location.pathname + "']").addClass("current");
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});
