@@ -10,25 +10,25 @@
     </div>
 </template>
 
-<script>
-    export default {
-        props: ['user'],
+            <script>
+            export default {
+                props: ['user'],
 
-        data() {
-            return {
-                newMessage: ''
+                data() {
+                    return {
+                        newMessage: ''
+                    }
+                },
+
+                methods: {
+                    sendMessage() {
+                        this.$emit('messagesent', {
+                            user: this.user,
+                            message: this.newMessage
+                        });
+
+                        this.newMessage = ''
+                    }
+                }
             }
-        },
-
-        methods: {
-            sendMessage() {
-                this.$emit('messagesent', {
-                    user: this.user,
-                    message: this.newMessage
-                });
-
-                this.newMessage = ''
-            }
-        }
-    }
-</script>
+            </script>

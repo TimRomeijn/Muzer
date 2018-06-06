@@ -57,3 +57,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Voor de realisatie van het werkelijke prototype is er een webapplicatie/platform ontwikkeld. Dit echter niet de eerste keuze geweest. De eerste keuze die gemaakt is , is de ontwikkeling van een mobiele applicatie en een webplatform. Door te overleggen met de stagebegeleiders binnen DPI is geconcludeerd dat dit niet alleen te tijdrovend is maar ook niet praktisch aangezien het dan meer twee concepten zijn.
+
+Het prototype is onderverdeeld in vier belangrijke onderdelen. Ten eerste is er het filtersysteem waarmee op muzikant,band en podiumprofielen gefilterd kan worden om het juiste profiel te vinden dat bij de behoeftes van deze doelgroepen aansluit.
+
+Ten tweede zijn er de profielen voor bovenstaande doelgroepen die voorzien worden van informatie die relevant is voor de doelgroepen die naar ze zoeken. Ten derde kan op deze profielen koppelingen en verzoeken verstuurd worden om bands te vormen, podia te verzoeken voor een optreden en bands te boeken voor een optreden. 
+ 
+Als laatste kan er middels een chatsysteem op een meer ‘menselijke’ manier gecommuniceerd worden tussen de doelgroepen om zo sneller en gebruiksvriendelijker tot een overeenkomst te komen. 
