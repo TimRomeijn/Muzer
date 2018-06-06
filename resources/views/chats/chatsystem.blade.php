@@ -74,21 +74,20 @@
                         <chat-messages :messages="messages"></chat-messages>
                 </div>
                 <div class="chat-input-area">
-                    <chat-form
-                            v-on:messagesent="addMessage"
-                            :user="{{ Auth::user() }}"
-                    ></chat-form>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Typ hier om een bericht te versturen..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <label class="btn btn-default btn-file">
-                                <i class="fas fa-paperclip fa-2x"></i> <input type="file" style="display: none;">
-                            </label>
-                            <button class="btn btn-outline-secondary" type="button">
-                                <i class="fas fa-envelope fa-2x"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}">
+
+                    </chat-form>
+                    {{--<div class="input-group">--}}
+                        {{--<input type="text" class="form-control" placeholder="Typ hier om een bericht te versturen..." aria-describedby="basic-addon2">--}}
+                        {{--<div class="input-group-append">--}}
+                            {{--<label class="btn btn-default btn-file">--}}
+                                {{--<i class="fas fa-paperclip fa-2x"></i> <input type="file" style="display: none;">--}}
+                            {{--</label>--}}
+                            {{--<button class="btn btn-outline-secondary" type="button">--}}
+                                {{--<i class="fas fa-envelope fa-2x"></i>--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
 

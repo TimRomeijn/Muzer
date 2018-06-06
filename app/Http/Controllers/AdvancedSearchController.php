@@ -39,6 +39,7 @@ class AdvancedSearchController extends Controller
         return view('advancedsearch.stagesearch', compact( 'results'));
     }
 
+    // Method to get the profiledata from the database
     public function getFilterData(Request $request) {
         if (!isset($_GET['type'])){
             return 'error';
@@ -49,6 +50,7 @@ class AdvancedSearchController extends Controller
         $bandsearches = [];
         $stagesearches = [];
 
+        // Check to filter for musicians and output wanted result
         if ($type == 'musician') {
             $musiciansearches = MusicianProfile::all();
             $mfilters = ['genre', 'location', 'instruments', 'typemusician'];
