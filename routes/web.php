@@ -41,7 +41,7 @@ Route::get('/profiles/musicianprofile/{profile}', 'ProfilesController@musicianpr
 
 Route::get('/profiles/bandprofile/{profile}', 'ProfilesController@bandprofile');
 
-Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile');
+Route::get('/profiles/stageprofile/{profile}', 'ProfilesController@stageprofile')->name('stageprofile');
 
 
 //Profiles content routing
@@ -61,6 +61,8 @@ Route::post('/profiles/editcontent', 'BlocksController@update');
 Route::post('/mail/sendmailtoband', 'MailsController@sendmailtoband');
 
 Route::post('/mail/sendmailtostage', 'MailsController@sendmailtostage');
+
+Route::post('/mail/sendmailtomusician', 'MailsController@sendmailtomusician');
 
 
 

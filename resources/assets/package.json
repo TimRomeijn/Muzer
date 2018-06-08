@@ -9,12 +9,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^2.0.0",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.14.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.0"
+    "bootstrap": "^4.1.1"
   }
 }

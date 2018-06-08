@@ -13,6 +13,7 @@
                 </div>
                 <div class="modal-body">
                     <form>
+                        <input type="hidden" name="id" value="{{ $profile->id }}">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Kies uw profiel</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="profile">

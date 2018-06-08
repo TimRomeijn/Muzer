@@ -12,15 +12,19 @@
     <div class="email-container">
 
         <div class="salutation">
-            <h1>Beste band {{ $name }},</h1>
+            <h1>Beste {{ $name }},</h1>
         </div>
 
         <div class="reason">
             <p>{{ $mailcontent }}</p>
         </div>
 
+        <div class="socials">
+            Meer informatie over ons podium is te vinden op ons Muzer profiel: <a href="http://localhost:8000/profiles/stageprofile/{{ $stage }}">{{ $profile }}</a>
+        </div>
+
         <div class="closing">
-            Met vriendelijke groet,
+            Groeten en als er nog vragen zijn dan horen wij dat natuurlijk graag!,
             <br>
             {{ $profile }}
         </div>
