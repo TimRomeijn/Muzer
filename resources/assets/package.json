@@ -17,6 +17,7 @@
     "popper.js": "^1.14.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1"
+    "bootstrap": "^4.1.1",
+    "grunt-requirejs": "^0.4.2"
   }
 }

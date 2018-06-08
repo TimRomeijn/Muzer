@@ -25,6 +25,20 @@ module.exports = function(grunt) {
             }
         },
 
+        requirejs: {
+            options: {
+                outputStyle: 'compressed',
+                sourceMap: true,
+                livereload: false,
+                expand: true
+            },
+            dist: {
+                files: {
+                    '../../public/js/require.js': 'js/main.js'
+                }
+            }
+        },
+
         js: {
             options: {
                 outputStyle: 'compressed',
@@ -65,6 +79,7 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-requirejs');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
