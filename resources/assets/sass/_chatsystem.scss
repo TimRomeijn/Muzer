@@ -60,12 +60,20 @@
       color: #777777;
     }
 
+    .chat-messages-area {
+      height: 100%;
+    }
+
     .chat-input-area {
       position: sticky;
       bottom: 0;
       width: 100%;
       z-index: 50;
       background: #F5F8FA;
+
+      #btn-chat {
+        height: 100%;
+      }
     }
 
     .upper-chat-bar {
