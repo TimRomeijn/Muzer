@@ -35,7 +35,7 @@
                 @endfor
             </div>
 
-            <div class="col-sm-8 right-chat-container d-none d-sm-block">
+            <div id="app" class="col-sm-8 right-chat-container d-none d-sm-block">
                 <div class="upper-chat-bar sticky-top">
                     <ul class="nav">
                         <li class="nav-item">
@@ -60,34 +60,12 @@
                     </ul>
                 </div>
                 <div class="chat-messages-area">
-                    {{--@for($i=0; $i < 5; $i++)--}}
-                        {{--<div class="card">--}}
-                            {{--<div class="card-body">--}}
-                                {{--<h5 class="card-title">Username</h5>--}}
-                                {{--<p class="card-text">Hallo dit is mijn chatbericht naar jou toe. Veel plezier ermee!</p>--}}
-                            {{--</div>--}}
-                            {{--<div class="card-footer text-muted">--}}
-                                {{--7-5-2018 - 13:59--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--@endfor--}}
                         <chat-messages :messages="messages"></chat-messages>
                 </div>
                 <div class="chat-input-area">
                     <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}">
-
+                        {{ csrf_field() }}
                     </chat-form>
-                    {{--<div class="input-group">--}}
-                        {{--<input type="text" class="form-control" placeholder="Typ hier om een bericht te versturen..." aria-describedby="basic-addon2">--}}
-                        {{--<div class="input-group-append">--}}
-                            {{--<label class="btn btn-default btn-file">--}}
-                                {{--<i class="fas fa-paperclip fa-2x"></i> <input type="file" style="display: none;">--}}
-                            {{--</label>--}}
-                            {{--<button class="btn btn-outline-secondary" type="button">--}}
-                                {{--<i class="fas fa-envelope fa-2x"></i>--}}
-                            {{--</button>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
             </div>
 
